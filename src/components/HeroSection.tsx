@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Cpu, Network, Shield } from "lucide-react";
+import { ArrowRight, Cpu, Network, Shield, TrendingUp, Briefcase, Users2, Trophy } from "lucide-react";
 
 const stats = [
-  { value: 20, suffix: "+", label: "Năm kinh nghiệm" },
-  { value: 150, suffix: "+", label: "Dự án hoàn thành" },
-  { value: 50, suffix: "+", label: "Chuyên gia" },
+  { icon: TrendingUp, value: 20, suffix: "+", label: "Năm kinh nghiệm", description: "Cung cấp giải pháp IoT và chuyển đổi số đa lĩnh vực" },
+  { icon: Briefcase, value: 150, suffix: "+", label: "Dự án triển khai", description: "Thành công cho TKV và nhiều doanh nghiệp lớn" },
+  { icon: Users2, value: 50, suffix: "+", label: "Chuyên gia", description: "Đội ngũ kỹ sư, cử nhân chuyên môn cao" },
+  { icon: Trophy, value: 10, suffix: "+", label: "Giải thưởng", description: "Được công nhận về chất lượng và đổi mới sáng tạo" },
 ];
 
 const CountUpNumber = ({ target, suffix }: { target: number; suffix: string }) => {
@@ -111,13 +112,21 @@ export const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center animate-scale-in" style={{ animationDelay: `${0.8 + index * 0.2}s` }}>
-                <div className="text-3xl md:text-5xl font-bold mb-2">
+              <div 
+                key={stat.label} 
+                className="glass-card rounded-2xl p-6 text-center animate-scale-in hover-lift"
+                style={{ animationDelay: `${0.8 + index * 0.15}s` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold mb-1">
                   <CountUpNumber target={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
+                <p className="text-sm font-semibold text-foreground mb-1">{stat.label}</p>
+                <p className="text-xs text-muted-foreground">{stat.description}</p>
               </div>
             ))}
           </div>
