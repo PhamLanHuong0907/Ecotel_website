@@ -21,9 +21,9 @@ const stats = [
   },
   {
     icon: Trophy,
-    value: "100%",
-    label: "Cam kết chất lượng",
-    description: "Đảm bảo tiến độ và tối ưu chi phí",
+    value: "10+",
+    label: "Giải thưởng",
+    description: "Được công nhận về chất lượng và đổi mới sáng tạo",
   },
 ];
 
