@@ -76,13 +76,6 @@ export const AboutSection = () => {
               </div>
             ))}
 
-            {/* Experience Card */}
-            <div className="glass-card rounded-2xl p-8 text-center glow-effect">
-              <div className="text-5xl font-bold gradient-text mb-2">20+</div>
-              <p className="text-muted-foreground">
-                Năm kinh nghiệm cung cấp giải pháp IoT và chuyển đổi số đa lĩnh vực
-              </p>
-            </div>
           </div>
         </div>
       </div>
