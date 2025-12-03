@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Cpu, Network, Shield, TrendingUp, Briefcase, Users2, Trophy } from "lucide-react";
+import heroBackground from "@/assets/hero-background.webp";
 
 const stats = [
   { icon: TrendingUp, value: 20, suffix: "+", label: "Năm kinh nghiệm", description: "Cung cấp giải pháp IoT và chuyển đổi số đa lĩnh vực" },
@@ -39,38 +40,40 @@ const CountUpNumber = ({ target, suffix }: { target: number; suffix: string }) =
 export const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.15)_0%,_transparent_70%)]" />
-      
-      {/* Grid Pattern */}
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+      
+      {/* Dark Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/90" />
+      
+      {/* Grid Pattern Overlay */}
+      <div 
+        className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--border)/0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)/0.5) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(hsl(var(--primary)/0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)/0.3) 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }}
       />
 
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-10 animate-float">
+      <div className="absolute top-1/4 left-10 animate-float hidden md:block">
         <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center">
           <Cpu className="w-8 h-8 text-primary" />
         </div>
       </div>
-      <div className="absolute top-1/3 right-20 animate-float" style={{ animationDelay: '2s' }}>
+      <div className="absolute top-1/3 right-20 animate-float hidden md:block" style={{ animationDelay: '2s' }}>
         <div className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center">
           <Network className="w-7 h-7 text-accent" />
         </div>
       </div>
-      <div className="absolute bottom-1/4 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
+      <div className="absolute bottom-1/3 left-1/4 animate-float hidden md:block" style={{ animationDelay: '4s' }}>
         <div className="w-12 h-12 rounded-xl glass-card flex items-center justify-center">
           <Shield className="w-6 h-6 text-primary" />
         </div>
       </div>
-
-      {/* Glowing Orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-3xl animate-pulse-slow" />
-      <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
