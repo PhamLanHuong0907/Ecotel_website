@@ -88,7 +88,7 @@ export const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up-delay-2">
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 animate-fade-up-delay-2 ">
             ECOTEL đồng hành cùng doanh nghiệp trong hành trình số hóa, <br></br>tối ưu vận hành và nâng cao năng lực cạnh tranh.
           </p>
 
