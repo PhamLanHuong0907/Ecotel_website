@@ -8,6 +8,7 @@ export const ContactSection = () => {
     email: "",
     phone: "",
     company: "",
+    title: "",
     message: "",
   });
 
@@ -17,24 +18,24 @@ export const ContactSection = () => {
       title: "Gửi thành công!",
       description: "Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.",
     });
-    setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", company: "", title: "", message: "" });
   };
 
   const contactInfo = [
     {
       icon: MapPin,
       label: "Địa chỉ",
-      value: "Tầng 5, Tòa nhà ABC, Số 123 Đường XYZ, Quận Cầu Giấy, Hà Nội",
+      value: "Số 4-Q28, 136 Nguyễn An Ninh, Tương Mai, Hoàng Mai, Hà Nội",
     },
     {
       icon: Phone,
       label: "Điện thoại",
-      value: "(024) 1234 5678",
+      value: "+84 378 665822",
     },
     {
       icon: Mail,
       label: "Email",
-      value: "contact@ecotel.vn",
+      value: "info@ecotel.com.vn",
     },
     {
       icon: Clock,
@@ -120,8 +121,20 @@ export const ContactSection = () => {
                   />
                 </div>
               </div>
+               <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Tiêu đề
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.title}
+                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                    placeholder="Tiêu đề"
+                  />
+                </div>
               <div className="mb-6">
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2 mt-7">
                   Nội dung
                 </label>
                 <textarea

@@ -1,26 +1,49 @@
 import { Factory, Home, Globe, ArrowRight } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const services = [
   {
     icon: Factory,
     title: "Công nghiệp",
-    description: "Giải pháp tự động hóa công nghiệp, SCADA, DCS, hệ thống điều khiển thông minh cho nhà máy, mỏ khai thác.",
-    features: ["Hệ thống SCADA", "Tự động hóa sản xuất", "Giám sát thời gian thực"],
+    description: "Giải pháp tự động hóa cho nhà máy và doanh nghiệp, từ gia công chế tạo máy, tối ưu vận hành đến xây dựng nhà máy thông minh.",
+    features: ["Giải pháp gia công chế tạo máy & dây chuyền sản xuất", "Giải pháp ERP & BI - Tối ưu hóa vận hành doanh nghiệp", "Nhà máy thông minh"],
     gradient: "from-blue-500 to-cyan-500",
+    images: [
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+      "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+    ],
   },
   {
     icon: Home,
     title: "Dân sinh",
-    description: "Smart home, smart building, hệ thống quản lý năng lượng thông minh cho tòa nhà và khu dân cư.",
-    features: ["Smart Home", "Quản lý năng lượng", "An ninh thông minh"],
+    description: "Trong lĩnh vực dân sinh, ECOTEL cung cấp nhiều giải pháp, thiết bị công nghệ nhằm phục vụ cho đời sống xã hội, bao gồm: Hệ thống đỗ xe tự động, sạc pin xe điện, và giám sát an ninh (giải pháp Camera AI). Chúng tôi cũng không ngừng cập nhật các dòng sản phẩm phù hợp với mục tiêu giúp cuộc sống tiện ích, thông minh và xanh hơn.",
+    features: ["Giải pháp đỗ xe thông minh & Kiểm soát xe ra vào", "Dịch vụ & Giải pháp sạc pin ô tô điện thông minh", "Giải pháp giám sát an ninh thông minh - Camera AI"],
     gradient: "from-emerald-500 to-teal-500",
+    images: [
+      "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80",
+      "https://images.unsplash.com/photo-1585503418537-88331351ad99?w=800&q=80",
+      "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80",
+    ],
   },
   {
     icon: Globe,
     title: "Giải pháp IoT tổng thể",
-    description: "Nền tảng IoT toàn diện, tích hợp cảm biến, gateway, cloud platform và ứng dụng quản lý.",
-    features: ["IoT Platform", "Cloud Integration", "Data Analytics"],
+    description: "ECOTEL không ngừng phát triển và triển khai các ứng dụng IoT tiên tiến ngay tại công ty, xem đây là nền tảng quan trọng để tối ưu hóa giải pháp cho ngành sản xuất, nâng cao hiệu suất và tính linh hoạt trong vận hành.",
+    features: ["Thiết kế mạch in PCB", "Giải pháp IoT tổng thể"],
     gradient: "from-violet-500 to-purple-500",
+    images: [
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+    ],
   },
 ];
 
@@ -45,29 +68,23 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Services List */}
+        <div className="space-y-16">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group glass-card rounded-3xl p-8 hover-lift relative overflow-hidden"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}
             >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className="w-8 h-8 text-white" />
+              {/* Text Content - 1/3 width */}
+              <div className="lg:w-1/3 space-y-5">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center`}>
+                  <service.icon className="w-7 h-7 text-white" />
                 </div>
+                
+                <h3 className="text-xl md:text-2xl font-bold text-foreground">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
 
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-foreground mb-4">{service.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
-
-                {/* Features */}
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-sm text-foreground/80">
                       <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.gradient}`} />
@@ -76,14 +93,47 @@ export const ServicesSection = () => {
                   ))}
                 </ul>
 
-                {/* CTA */}
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 text-primary font-medium group/link"
+                  className="inline-flex items-center gap-2 text-primary text-sm font-medium group"
                 >
                   Tìm hiểu thêm
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
+              </div>
+
+              {/* Image Carousel - 2/3 width */}
+              <div className="lg:w-2/3 w-full">
+                <Carousel
+                  className="w-full"
+                  plugins={[
+                    Autoplay({
+                      delay: 4000,
+                      stopOnInteraction: false,
+                      stopOnMouseEnter: true,
+                    }),
+                  ]}
+                  opts={{
+                    loop: true,
+                  }}
+                >
+                  <CarouselContent>
+                    {service.images.map((image, imgIndex) => (
+                      <CarouselItem key={imgIndex}>
+                        <div className="relative aspect-[16/9] rounded-2xl overflow-hidden glass-card">
+                          <img
+                            src={image}
+                            alt={`${service.title} ${imgIndex + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-10`} />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
               </div>
             </div>
           ))}

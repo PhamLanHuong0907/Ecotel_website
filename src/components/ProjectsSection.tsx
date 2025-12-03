@@ -2,25 +2,25 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Hệ thống giám sát mỏ than thông minh",
+    title: "Hệ thống giám sát dầu và hành trình xe",
     client: "Tập đoàn TKV",
     description: "Triển khai hệ thống IoT giám sát an toàn và vận hành cho các mỏ than lớn",
     category: "Công nghiệp",
   },
   {
-    title: "Chuyển đổi số nhà máy sản xuất",
+    title: "Phần mềm quản lý máy móc thiết bị, nhận lệnh trực tuyến",
     client: "Công ty ABC",
     description: "Tự động hóa quy trình sản xuất và quản lý kho vận thông minh",
     category: "Công nghiệp",
   },
   {
-    title: "Smart City - Quản lý đô thị",
+    title: "Phần mềm nhân sự, tiền lương tích hợp AI",
     client: "UBND Thành phố XYZ",
     description: "Hệ thống giám sát giao thông, chiếu sáng và môi trường thông minh",
     category: "Dân sinh",
   },
   {
-    title: "Hệ thống năng lượng thông minh",
+    title: "Phần mềm kế hoạch và định mức sản xuất",
     client: "Tập đoàn Điện lực",
     description: "Giám sát và tối ưu hóa lưới điện với công nghệ IoT tiên tiến",
     category: "IoT",

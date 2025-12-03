@@ -21,7 +21,7 @@ const stats = [
   },
   {
     icon: Trophy,
-    value: "10+",
+    value: "4+",
     label: "Giải thưởng",
     description: "Được công nhận về chất lượng và đổi mới sáng tạo",
   },

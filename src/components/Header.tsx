@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-
+import logo from "@/assets/ecotel-logo.png";
 interface DropdownItem {
   label: string;
   href: string;
@@ -57,14 +57,16 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">E</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold gradient-text">ECOTEL</span>
-              <span className="text-[10px] text-muted-foreground tracking-wider">Connected Ecosystem</span>
-            </div>
+          <a href="#home" className="flex items-start ml-0 group">
+            <img src={logo} alt="ECOTEL Logo" className="  h-[53px] w-auto object-contain
+  px-3 py-1
+  rounded-xl
+  bg-white/95
+  border border-white/40
+  shadow-xl shadow-black/60
+  ring-2 ring-cyan-300/70
+  drop-shadow-[0_0_12px_rgba(34,211,238,0.65)]
+  backdrop-blur-sm" />
           </a>
 
           {/* Desktop Navigation */}

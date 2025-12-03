@@ -6,7 +6,7 @@ const stats = [
   { icon: TrendingUp, value: 20, suffix: "+", label: "Năm kinh nghiệm", description: "Cung cấp giải pháp IoT và chuyển đổi số đa lĩnh vực" },
   { icon: Briefcase, value: 150, suffix: "+", label: "Dự án triển khai", description: "Thành công cho TKV và nhiều doanh nghiệp lớn" },
   { icon: Users2, value: 50, suffix: "+", label: "Chuyên gia", description: "Đội ngũ kỹ sư, cử nhân chuyên môn cao" },
-  { icon: Trophy, value: 10, suffix: "+", label: "Giải thưởng", description: "Được công nhận về chất lượng và đổi mới sáng tạo" },
+  { icon: Trophy, value: 4, suffix: "+", label: "Giải thưởng", description: "Được công nhận về chất lượng và đổi mới sáng tạo" },
 ];
 
 const CountUpNumber = ({ target, suffix }: { target: number; suffix: string }) => {
@@ -77,23 +77,19 @@ export const HeroSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-fade-up">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm text-muted-foreground">Tiên phong chuyển đổi số tại Việt Nam</span>
-          </div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up-delay-1">
-            <span className="text-foreground">Giải pháp </span>
-            <span className="gradient-text">IoT & Chuyển đổi số</span>
+            <span className="text-foreground">Tiên phong</span>
+            <br/>
+            <span className="gradient-text">chuyển đổi số</span>
             <br />
-            <span className="text-foreground">toàn diện</span>
+            <span className="text-foreground">& kết nối hệ sinh thái</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up-delay-2">
-            ECOTEL đồng hành cùng doanh nghiệp trong hành trình số hóa, tối ưu vận hành và nâng cao năng lực cạnh tranh.
+            ECOTEL đồng hành cùng doanh nghiệp trong hành trình số hóa, <br></br>tối ưu vận hành và nâng cao năng lực cạnh tranh.
           </p>
 
           {/* CTA Buttons */}

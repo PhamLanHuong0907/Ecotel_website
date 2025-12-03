@@ -1,5 +1,5 @@
 import { Facebook, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
-
+import logo from "@/assets/ecotel-logo.png";
 const footerLinks = {
   company: [
     { label: "Giới thiệu", href: "#about" },
@@ -39,31 +39,26 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <a href="#home" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">E</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold gradient-text">ECOTEL</span>
-                <span className="text-[10px] text-muted-foreground tracking-wider">Connected Ecosystem</span>
-              </div>
+              <img src={logo} alt="ECOTEL Logo" className="w-40 h-20 object-contain mt-[-50px] flex items-center justify-center mb-[-10px]" />
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Đơn vị hàng đầu tại Việt Nam trong lĩnh vực cung cấp giải pháp chuyển đổi số và IoT tổng thể.
+              ECOTEL cập nhật xu hướng công nghệ phù hợp, vận hành theo hệ thống được cải tiến linh hoạt và chuyên nghiệp, thấu hiểu, chân thành, cam kết lợi ích để triển khai nhiều dự án chất lượng hơn trong năm 2025.
+              
             </p>
 
             {/* Contact Quick Info */}
             <div className="space-y-3">
-              <a href="tel:02412345678" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+84378665822" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>(024) 1234 5678</span>
+                <span>+84 378 665822</span>
               </a>
-              <a href="mailto:contact@ecotel.vn" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@ecotel.com.vn" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>contact@ecotel.vn</span>
+                <span>info@ecotel.com.vn</span>
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Tầng 5, Tòa nhà ABC, Số 123 Đường XYZ, Quận Cầu Giấy, Hà Nội</span>
+                <span>Số 4-Q28, 136 Nguyễn An Ninh, Tương Mai, Hoàng Mai, Hà Nội</span>
               </div>
             </div>
           </div>
@@ -121,7 +116,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ECOTEL. Bảo lưu mọi quyền.
+            © {new Date().getFullYear()} ECOTEL Co.,LTD .
           </p>
 
           {/* Social Links */}

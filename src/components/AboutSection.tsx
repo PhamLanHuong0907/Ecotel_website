@@ -47,7 +47,7 @@ export const AboutSection = () => {
             </p>
 
             <div className="space-y-4">
-              {["Giải pháp chuyển đổi số toàn diện", "Tối ưu chi phí vận hành", "Hỗ trợ 24/7"].map((item, index) => (
+              {["Giải pháp chuyển đổi số toàn diện", "Tùy chỉnh theo nhu cầu khách hàng", "Khả năng mở rộng quy mô"].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-foreground">{item}</span>
