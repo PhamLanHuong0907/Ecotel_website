@@ -99,7 +99,7 @@ export const Header = () => {
                 {/* Dropdown */}
                 {item.dropdown && activeDropdown === item.label && (
                   <div className="absolute top-full left-0 pt-2 animate-fade-up">
-                    <div className="glass-card rounded-xl p-2 min-w-[220px] border border-border/50">
+                    <div className="glass-card rounded-xl p-2 min-w-[220px] border border-border/50 bg-slate-950">
                       {item.dropdown.map((subItem) => (
                         <a
                           key={subItem.label}
