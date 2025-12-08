@@ -45,7 +45,7 @@ const navItems: NavItem[] = [
       { label: "Triển lãm", href: "#exhibitions" },
     ],
   },
-  { label: "LIÊN HỆ", href: "#contact" },
+  { label: "TIN TỨC", href: "#blog" },
 ];
 
 export const Header = () => {

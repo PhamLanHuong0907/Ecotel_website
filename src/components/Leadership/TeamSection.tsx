@@ -1,131 +1,117 @@
-import { useState } from "react";
 import { Linkedin, Mail, Award, Briefcase, GraduationCap, Star, ChevronRight, Sparkles } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
-
+import image_leader from "@/assets/Leadership.png"
 const leadershipData = [
-  {
-    name: "Vũ Quốc Kỳ",
-    position: "Chủ tịch HĐQT kiêm Tổng Giám đốc",
-    company: "ESOFT",
-    image: "/placeholder.svg",
-    bio: "Người sáng lập và dẫn dắt ESOFT từ những ngày đầu thành lập. Với hơn 30 năm kinh nghiệm trong ngành công nghệ thông tin, ông đã xây dựng nên nền móng vững chắc cho sự phát triển của công ty.",
-    achievements: ["Thành lập ESOFT năm 1999", "Mở rộng thị trường quốc tế", "Phát triển các giải pháp IoT tiên phong"],
-    education: "Kỹ sư Công nghệ thông tin",
-    experience: "30+ năm"
-  },
   {
     name: "Nguyễn Tuấn Anh",
     position: "Giám đốc",
     company: "EcoTel",
-    image: "/placeholder.svg",
+    image: image_leader, 
     bio: "Lãnh đạo trung tâm nghiên cứu phát triển và thử nghiệm sản phẩm lõi EcoTel. Với tầm nhìn chiến lược, ông đang dẫn dắt đội ngũ kế thừa công nghệ cũ, cập nhật công nghệ mới.",
     achievements: ["Thành lập EcoTel năm 2024", "Phát triển sản phẩm lõi mới", "Xây dựng đội ngũ R&D chuyên sâu"],
-    education: "Thạc sĩ Khoa học máy tính",
-    experience: "15+ năm"
-  },
-  {
-    name: "Trần Minh Đức",
-    position: "Giám đốc Công nghệ",
-    company: "ESOFT",
-    image: "/placeholder.svg",
-    bio: "Chịu trách nhiệm định hướng công nghệ và kiến trúc hệ thống cho toàn bộ sản phẩm của công ty. Ông là chuyên gia hàng đầu về IoT và Cloud Computing.",
-    achievements: ["Triển khai hạ tầng Cloud", "Phát triển kiến trúc IoT", "Đào tạo đội ngũ kỹ thuật"],
-    education: "Tiến sĩ Khoa học máy tính",
-    experience: "20+ năm"
-  },
-  {
-    name: "Lê Thị Hương",
-    position: "Giám đốc Kinh doanh",
-    company: "ESOFT",
-    image: "/placeholder.svg",
-    bio: "Phụ trách mở rộng thị trường và phát triển quan hệ đối tác chiến lược. Với mạng lưới khách hàng rộng khắp, bà đã góp phần quan trọng vào sự tăng trưởng của công ty.",
-    achievements: ["Mở rộng thị trường Đông Nam Á", "Thiết lập 50+ đối tác chiến lược", "Tăng trưởng doanh thu 200%"],
-    education: "MBA Quản trị Kinh doanh",
-    experience: "18+ năm"
+    education: "Chứng chỉ PMP, PMI II",
+    experience: "Chuyên gia phần mềm nhúng và tự động hóa"
   }
 ];
 
 const LeaderCard = ({ leader, index, isVisible }: { leader: typeof leadershipData[0]; index: number; isVisible: boolean }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  
   return (
     <div 
       className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
       style={{ transitionDelay: `${index * 150}ms` }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="glass-card rounded-3xl overflow-hidden hover-lift group relative">
-        {/* Animated border */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ padding: '2px' }}>
-          <div className="w-full h-full bg-card rounded-3xl" />
-        </div>
+      {/* - items-stretch: Để Card và Ảnh có chiều cao BẰNG NHAU 
+         - gap-6: Khoảng cách giữa 2 khối
+      */}
+      <div className="flex flex-col-reverse md:flex-row items-stretch gap-6 h-full">
         
-        <div className="relative z-10 p-6">
-          {/* Image & Info Header */}
-          <div className="flex items-start gap-6 mb-6">
-            <div className="relative">
-              <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-primary/30 group-hover:border-primary transition-colors duration-500">
-                <img src={leader.image} alt={leader.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        {/* === PHẦN 1: CARD THÔNG TIN (BÊN TRÁI) === */}
+        {/* md:w-[60%] hoặc flex-[1.5]: Chiếm phần lớn diện tích */}
+        <div className="w-full md:flex-[1.5]">
+          <div className="glass-card rounded-3xl p-8 relative border border-border/50 shadow-sm h-full flex flex-col justify-between">
+            
+            <div>
+              {/* Header */}
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-2">
+                  <Briefcase className="w-3 h-3" />
+                  {leader.company}
+                </span>
+                <h3 className="text-3xl font-bold text-foreground mt-2">{leader.name}</h3>
+                <p className="text-primary font-medium text-lg">{leader.position}</p>
               </div>
-              <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg animate-bounce-subtle">
-                <Sparkles className="w-5 h-5 text-white" />
+              
+              {/* Bio */}
+              <p className="text-muted-foreground text-base leading-relaxed mb-6 border-b border-border/30 pb-4">
+                {leader.bio}
+              </p>
+              
+              {/* Stats & Social */}
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm font-medium">
+                    <GraduationCap className="w-5 h-5 text-primary" />
+                    <span className="text-foreground/80">{leader.education}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm font-medium">
+                    <Award className="w-5 h-5 text-accent" />
+                    <span className="text-foreground/80">{leader.experience}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                   <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors border border-border/50">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors border border-border/50">
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
             </div>
             
-            <div className="flex-1">
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-2">
-                <Briefcase className="w-3 h-3" />
-                {leader.company}
-              </span>
-              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{leader.name}</h3>
-              <p className="text-primary/80 font-medium text-sm">{leader.position}</p>
-            </div>
-          </div>
-          
-          {/* Bio */}
-          <p className="text-muted-foreground text-sm leading-relaxed mb-6">{leader.bio}</p>
-          
-          {/* Stats */}
-          <div className="flex items-center gap-4 mb-6">
-            <div className="flex items-center gap-2 text-sm">
-              <GraduationCap className="w-4 h-4 text-primary" />
-              <span className="text-muted-foreground">{leader.education}</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm">
-              <Award className="w-4 h-4 text-accent" />
-              <span className="text-muted-foreground">{leader.experience}</span>
-            </div>
-          </div>
-          
-          {/* Achievements - Expandable */}
-          <div className={`overflow-hidden transition-all duration-500 ${isHovered ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="pt-4 border-t border-border/30">
-              <h4 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-500" />
+            {/* Achievements */}
+            <div className="pt-5 border-t border-border/30 bg-secondary/30 -mx-8 -mb-8 px-8 py-6">
+              <h4 className="text-sm font-bold text-foreground mb-3 flex items-center gap-2 uppercase tracking-wide">
+                <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                 Thành tựu nổi bật
               </h4>
               <ul className="space-y-2">
                 {leader.achievements.map((achievement, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <ChevronRight className="w-3 h-3 text-primary" />
-                    {achievement}
+                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground/90">
+                    <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>{achievement}</span>
                   </li>
                 ))}
               </ul>
             </div>
-          </div>
-          
-          {/* Social Links */}
-          <div className="flex items-center gap-3 mt-4 pt-4 border-t border-border/30">
-            <a href="#" className="w-9 h-9 rounded-full bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a href="#" className="w-9 h-9 rounded-full bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
-              <Mail className="w-4 h-4" />
-            </a>
+
           </div>
         </div>
+
+        {/* === PHẦN 2: ẢNH (BÊN PHẢI) === */}
+        {/* - md:flex-1: Tự động chiếm hết phần rộng còn lại 
+            - min-h-[300px]: Đảm bảo chiều cao tối thiểu trên mobile
+            - relative: Để làm khung cho ảnh absolute bên trong
+        */}
+        <div className="w-full md:flex-1 relative min-h-[320px] md:min-h-full ">
+           <img 
+            src={leader.image} 
+            alt={leader.name}
+            // absolute inset-0 + h-full: Buộc ảnh phải căng theo khung cha
+            // object-cover: Đảm bảo ảnh đẹp dù khung hình thay đổi
+            className="relative inset-0 w-full h-full object-cover  rounded-3xl overflow-hidden shadow-lg border-2 border-border/50"
+          />
+
+          {/* Overlay gradient nhẹ dưới đáy ảnh để làm nổi bật icon hoặc text nếu có */}
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+
+          {/* Icon trang trí */}
+          <div className="absolute bottom-4 right-4 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg">
+             <Sparkles className="w-6 h-6 text-white" />
+          </div>
+        </div>
+
       </div>
     </div>
   );
@@ -148,7 +134,8 @@ export const TeamSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Tăng max-w để layout rộng rãi hơn */}
+        <div className="grid grid-cols-1 gap-16 max-w-6xl mx-auto">
           {leadershipData.map((leader, index) => (
             <LeaderCard key={leader.name} leader={leader} index={index} isVisible={isVisible} />
           ))}
