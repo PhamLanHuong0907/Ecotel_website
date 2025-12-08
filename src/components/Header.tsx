@@ -14,17 +14,17 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "TRANG CHỦ", href: "#home" },
+  { label: "TRANG CHỦ", href: "/" },
   {
     label: "GIỚI THIỆU",
     href: "#about",
     dropdown: [
-      { label: "Giới thiệu chung", href: "#about-general" },
-      { label: "Đội ngũ lãnh đạo", href: "#leadership" },
-      { label: "Tầm nhìn - Sứ mệnh", href: "#vision" },
-      { label: "Giá trị cốt lõi", href: "#values" },
-      { label: "Khách hàng", href: "#customers" },
-      { label: "Đối tác", href: "#partners" },
+      { label: "Giới thiệu chung", href: "/about" },
+      { label: "Đội ngũ lãnh đạo", href: "/about/leadership" },
+      { label: "Đội ngũ chuyên gia", href: "/about/experts" },
+      { label: "Danh mục sản phẩm", href: "/about/product-catalog" },
+      { label: "Khách hàng", href: "/about/customers" },
+      { label: "Đối tác", href: "/about/partners" },
     ],
   },
   {
@@ -58,15 +58,8 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-start ml-0 group">
-            <img src={logo} alt="ECOTEL Logo" className="  h-[53px] w-auto object-contain
-  px-3 py-1
-  rounded-xl
-  bg-white/95
-  border border-white/40
-  shadow-xl shadow-black/60
-  ring-2 ring-cyan-300/70
-  drop-shadow-[0_0_12px_rgba(34,211,238,0.65)]
-  backdrop-blur-sm" />
+            <img src={logo} alt="ECOTEL Logo" className="  h-[53px] w-auto object-contain">
+            </img>
           </a>
 
           {/* Desktop Navigation */}
