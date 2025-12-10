@@ -6,7 +6,7 @@ import { OrganizationSection } from "@/components/About/OrganizationSection";
 import { VisionMissionSection } from "@/components/About/VisionMissionCard";
 import { TechnologiesSection } from "@/components/About/TechnologySection";
 import { BranchesSection } from "@/components/About/BranchesSection";
-import { CTASection } from "@/components/Leadership/CTASection";
+import { CTASection } from "@/components/CTASection";
 const About = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden">

@@ -48,9 +48,12 @@ export const StatsSection = () => {
               className="text-center group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="glass-card rounded-3xl p-8 hover-lift h-full">
+              {/* --- ĐÃ CẬP NHẬT --- */}
+              {/* Đặt shadow-lg và shadow-primary/30 ở đây để nó hiện vĩnh viễn */}
+              <div className="glass-card rounded-3xl p-8 hover-lift h-full shadow-lg shadow-primary/30 transition-all duration-300">
+                
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
                   <stat.icon className="w-8 h-8 text-primary" />
                 </div>
 

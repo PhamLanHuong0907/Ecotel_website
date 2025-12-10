@@ -1,10 +1,20 @@
 import { Sparkles, Quote } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
-
+import leader from "@/assets/leader2.png"
+import { ValuesSection } from "@/components/Leadership/ValuesSection";
 export const HeroSection = () => {
   const { ref, isVisible } = useSectionInView();
 
   return (
+    <div
+      style={{
+        backgroundImage: `url(${leader})`,
+        height: "auto",
+        width: "100%",
+        backgroundSize: "100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
     <section ref={ref} className="relative pt-32 pb-20 overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0">
@@ -24,7 +34,7 @@ export const HeroSection = () => {
     
           </h1>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
             Đội ngũ lãnh đạo giàu kinh nghiệm và tâm huyết, luôn nỗ lực không ngừng để đưa công ty phát triển vững mạnh và mang đến những giải pháp công nghệ tốt nhất.
           </p>
         </div>
@@ -33,12 +43,14 @@ export const HeroSection = () => {
         <div className={`mt-12 max-w-2xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="glass-card rounded-2xl p-6 relative">
             <Quote className="absolute top-4 left-4 w-8 h-8 text-primary/20" />
-            <blockquote className="text-center italic text-muted-foreground pl-8">
+            <blockquote className="text-center italic text-foreground pl-8">
               "Thành công của chúng tôi được xây dựng trên nền tảng của sự đổi mới không ngừng và cam kết mang đến giá trị thực sự cho khách hàng."
             </blockquote>
           </div>
         </div>
       </div>
     </section>
+    <ValuesSection />
+    </div>
   );
 };

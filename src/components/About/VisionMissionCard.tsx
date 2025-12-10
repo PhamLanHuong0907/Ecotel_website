@@ -43,7 +43,7 @@ export const VisionMissionSection = () => {
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary mb-4">Định hướng phát triển</span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Tầm nhìn - Sứ mệnh - <span className="gradient-text">Giá trị cốt lõi</span>
+             <span className="gradient-text">Tầm nhìn - Sứ mệnh - Giá trị cốt lõi</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">

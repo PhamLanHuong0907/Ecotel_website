@@ -15,6 +15,7 @@ export const HeroSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      
       <section ref={ref} className="py-24 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl animate-pulse-slow" />

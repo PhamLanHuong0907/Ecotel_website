@@ -21,8 +21,8 @@ const navItems: NavItem[] = [
     dropdown: [
       { label: "Giới thiệu chung", href: "/about" },
       { label: "Đội ngũ lãnh đạo", href: "/about/leadership" },
-      { label: "Đội ngũ chuyên gia", href: "/about/experts" },
-      { label: "Danh mục sản phẩm", href: "/about/product-catalog" },
+      { label: "Đội ngũ chuyên gia", href: "/about/professors" },
+      { label: "Danh mục sản phẩm", href: "/about/products" },
       { label: "Khách hàng", href: "/about/customers" },
       { label: "Đối tác", href: "/about/partners" },
     ],
@@ -31,7 +31,7 @@ const navItems: NavItem[] = [
     label: "DỊCH VỤ",
     href: "#services",
     dropdown: [
-      { label: "Công nghiệp", href: "#industrial" },
+      { label: "Công nghiệp", href: "/industrial" },
       { label: "Dân sinh", href: "#residential" },
       { label: "Giải pháp IoT tổng thể", href: "#iot-solutions" },
     ],
