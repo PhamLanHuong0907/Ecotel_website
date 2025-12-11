@@ -17,7 +17,7 @@ export const HeroSection = () => {
       }}
     >
     <div className="absolute inset-0 bg-black/60"></div>
-    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden">
+    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden mb-5">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -33,7 +33,7 @@ export const HeroSection = () => {
             <span className="text-sm font-medium text-primary"></span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mt-[15px] mb-6">
           
             <span className="gradient-text">Khách hàng tin cậy</span>
             <br />

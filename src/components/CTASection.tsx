@@ -1,5 +1,5 @@
 import { ChevronRight } from "lucide-react";
-
+import {HashLink} from 'react-router-hash-link';
 export const CTASection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
@@ -11,13 +11,14 @@ export const CTASection = () => {
         <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
           Liên hệ ngay để được tư vấn và hỗ trợ từ đội ngũ chuyên gia của ECOTEL
         </p>
-        <a
-          href="/#contact"
+        <HashLink
+          smooth
+          to="/#contact"
           className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold hover-lift"
         >
           Liên hệ ngay
           <ChevronRight className="w-4 h-4" />
-        </a>
+        </HashLink>
       </div>
     </section>
   );

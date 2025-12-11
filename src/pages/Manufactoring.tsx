@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { Cog, Cpu, Zap, Target, Settings, Shield, Wrench, Factory, CheckCircle2 } from "lucide-react";
 import feature1 from "@/assets/daychuyencongnghiep.webp";
 import feature2 from "@/assets/daychuyencongnghiep1.jpg";
-// Data
+import { Button } from "@/components/ui/button";// Data
 const designFeatures = [
   { text: "Thiết kế và chế tạo máy móc chuyên dụng theo yêu cầu, phù hợp với quy trình sản xuất đặc thù của doanh nghiệp.", icon: Cog },
   { text: "Phát triển và lắp đặt dây chuyền sản xuất tự động, tích hợp các công nghệ hiện đại như IoT, AI, SCADA nhằm nâng cao hiệu suất vận hành.", icon: Cpu },
@@ -68,7 +68,7 @@ const ManufacturingDetail = () => {
           backgroundClass="bg-gradient-to-b from-secondary/30 to-background"
           glowClass="from-accent/20 to-primary/20"
         />
-        <a href="/industrial"><button className="w-[200px] h-[100px] items-center justify-center text-center ml-[43%] border-blue-600 bg-gradient-to-br from-secondray/30 to -background" >Trở về</button></a>
+        <a href="/industrial"><Button className="w-[100px] h-[50px] ml-[47%] mb-6 group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 ">Trở về</Button></a>
         <CTASection />
       </main>
 

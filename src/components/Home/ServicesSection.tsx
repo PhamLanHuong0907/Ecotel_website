@@ -1,5 +1,6 @@
 import { Factory, Home, Globe, ArrowRight } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import {HashLink} from 'react-router-hash-link';
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ScrollToTop from "../Scrolltotop";
 
 const services = [
   {
@@ -93,13 +95,15 @@ export const ServicesSection = () => {
                   ))}
                 </ul>
 
-                <a
-                  href="#contact"
+                <HashLink
+                  smooth
+                  to="/#contact"
                   className="inline-flex items-center gap-2 text-primary text-sm font-medium group"
                 >
+                
                   Tìm hiểu thêm
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </HashLink>
               </div>
 
               {/* Image Carousel - 2/3 width */}

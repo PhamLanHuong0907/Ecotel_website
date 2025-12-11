@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/ecotel-logo.png";
+import {HashLink} from 'react-router-hash-link';
 interface DropdownItem {
   label: string;
   href: string;
@@ -57,7 +58,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-start ml-0 group">
+          <a href="#home" className="flex items-start ml-0 group select-none cursor-pointer">
             <img src={logo} alt="ECOTEL Logo" className="  h-[53px] w-auto object-contain">
             </img>
           </a>
@@ -74,8 +75,8 @@ export const Header = () => {
                 <a
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary/50",
-                    activeDropdown === item.label && "text-primary bg-secondary/50"
+                    "flex items-center gap-1 px-4 py-2 text-sm font-medium select-none cursor-pointer text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-secondary/50",
+                    activeDropdown === item.label && "text-primary bg-secondary/50 select-none cursor-pointer"
                   )}
                 >
                   {item.label}
@@ -110,13 +111,14 @@ export const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <a
-            href="#contact"
+          <HashLink
+            smooth
+            to="/#contact"
             className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold text-sm hover-lift"
             style={{ boxShadow: "var(--shadow-button)" }}
           >
             Liên hệ ngay
-          </a>
+          </HashLink>
 
           {/* Mobile Menu Button */}
           <button

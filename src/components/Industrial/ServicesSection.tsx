@@ -5,41 +5,44 @@ import { Factory, BarChart3, Cpu, ArrowRight } from "lucide-react";
 import image_qlsx from "@/assets/Quanlysxtongthe.png";
 import image_qlsx1 from "@/assets/qlsx1.png";
 import image_erp from "@/assets/giaiphaperp.png";
+import ScrollToTop from "../Scrolltotop";
 const services = [
   {
     id: 1,
-    title: "Giải pháp gia công chế tạo máy & dây chuyền sản xuất",
-    description: `ECOTEL là đơn vị tiên phong cung cấp các giải pháp về gia công máy và dây chuyền sản xuất.\n\nTrong bối cảnh công nghiệp hiện đại, việc tối ưu hóa dây chuyền sản xuất và gia công chế tạo máy đóng vai trò then chốt trong việc nâng cao năng suất, giảm chi phí và cải thiện chất lượng sản phẩm. ECOTEL mang đến giải pháp thiết kế, chế tạo máy và dây chuyền sản xuất theo nhu cầu đặc thù của từng doanh nghiệp, giúp tối ưu hiệu quả vận hành và đẩy mạnh tự động hóa trong sản xuất.`,
-    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&auto=format&fit=crop&q=60",
+    title: "Nhà máy thông minh",
+    description: `Trong bối cảnh Công nghiệp 4.0, việc xây dựng Nhà máy thông minh (Smart Factory) không chỉ là xu hướng mà còn là yếu tố cốt lõi giúp doanh nghiệp sản xuất nâng cao năng suất, tối ưu chi phí và duy trì lợi thế cạnh tranh.\n\nECOTEL tự hào đồng hành cùng các nhà máy trong việc xây dựng tầm nhìn và lộ trình chuyển đổi số, từ việc triển khai các hệ thống IoT, tự động hóa đến phân tích dữ liệu và trí tuệ nhân tạo.`,
+    image: "https://vdigital.vn/wp-content/uploads/2022/11/nha-may-thong-minh-1.png",
     icon: Factory,
+    path: '/industrial/smart_factory'
   },
   {
     id: 2,
-    title: "Giải pháp ERP & BI - Tối ưu hóa vận hành doanh nghiệp",
-    description: `Trong kỷ nguyên số, việc áp dụng hệ thống ERP (Enterprise Resource Planning) và BI (Business Intelligence) trở thành yếu tố quyết định giúp doanh nghiệp tối ưu hóa quy trình vận hành, tăng cường khả năng quản lý dữ liệu và ra quyết định chính xác dựa trên thông tin thời gian thực.\n\nECOTEL mang đến giải pháp ERP & BI toàn diện, giúp doanh nghiệp chuẩn hóa quy trình, đồng bộ dữ liệu và nâng cao hiệu suất hoạt động.`,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
-    icon: BarChart3,
+    title: "Giải pháp gia công chế tạo máy & dây chuyền sản xuất",
+    description: `ECOTEL là đơn vị tiên phong cung cấp các giải pháp về gia công máy và dây chuyền sản xuất.\n\nTrong bối cảnh công nghiệp hiện đại, việc tối ưu hóa dây chuyền sản xuất và gia công chế tạo máy đóng vai trò then chốt trong việc nâng cao năng suất, giảm chi phí và cải thiện chất lượng sản phẩm. ECOTEL mang đến giải pháp thiết kế, chế tạo máy và dây chuyền sản xuất theo nhu cầu đặc thù của từng doanh nghiệp, giúp tối ưu hiệu quả vận hành và đẩy mạnh tự động hóa trong sản xuất.`,
+    image: "https://cncvina.com.vn/uploads/2548/day-chuyen-san-xuat-tu-dong-su-dung-robot-1-scaled.jpg",
+    icon: Factory,
+    path: '/industrial/manufacturing'
   },
   {
     id: 3,
-    title: "Nhà máy thông minh",
-    description: `Trong bối cảnh Công nghiệp 4.0, việc xây dựng Nhà máy thông minh (Smart Factory) không chỉ là xu hướng mà còn là yếu tố cốt lõi giúp doanh nghiệp sản xuất nâng cao năng suất, tối ưu chi phí và duy trì lợi thế cạnh tranh.\n\nECOTEL tự hào đồng hành cùng các nhà máy trong việc xây dựng tầm nhìn và lộ trình chuyển đổi số, từ việc triển khai các hệ thống IoT, tự động hóa đến phân tích dữ liệu và trí tuệ nhân tạo.`,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=60",
-    icon: Cpu,
-  },
-  {
-    id: 4,
-    title: "Giải pháp quản lý sản xuất tổng thể",
-    description:``,
-    image: image_qlsx,
+    title: "Giải pháp ERP & BI - Tối ưu hóa vận hành doanh nghiệp",
+    description: `Trong kỷ nguyên số, việc áp dụng hệ thống ERP (Enterprise Resource Planning) và BI (Business Intelligence) trở thành yếu tố quyết định giúp doanh nghiệp tối ưu hóa quy trình vận hành, tăng cường khả năng quản lý dữ liệu và ra quyết định chính xác dựa trên thông tin thời gian thực.\n\nECOTEL mang đến giải pháp ERP & BI toàn diện, giúp doanh nghiệp chuẩn hóa quy trình, đồng bộ dữ liệu và nâng cao hiệu suất hoạt động.`,
+    image: "https://lh7-us.googleusercontent.com/lsW0S-mor_MZlITVwK9rcRTDvRatX8c8MZS4qVcSkJovYSFNX5xu08zVZ63bh3shl9r0TxJ2-Nrij4WPWT0HmC1R3ytC2AXIQsr4VtWbZbbYNsTADzcZ31VM1skKARaAxCEz9JLhELZaeXodLLZZ8Kg",
     icon: BarChart3,
+    path: '/about/customers'
   },
+  
   {
     id: 5,
-    title: "Giải pháp quản lý sản xuất - EcoMES",
-    description:``,
+    title: "Giải pháp Eco-MES - Mảnh ghép hoàn hảo kết nối ERP và Tầng sản xuất",
+    description:`
+
+Sự đứt gãy thông tin giữa bộ phận văn phòng (ERP) và phân xưởng sản xuất là rào cản lớn nhất của doanh nghiệp. Eco-MES đóng vai trò là "trung tâm điều phối", tiếp nhận kế hoạch từ ERP và chuyển đổi thành lệnh sản xuất chi tiết xuống từng máy.
+
+Giải pháp của chúng tôi cung cấp khả năng kiểm soát toàn diện: từ giám sát hiệu suất thiết bị, quản lý chất lượng đến tích hợp kho bãi. Dữ liệu được thu thập tự động qua IoT Gateway, đảm bảo tính minh bạch và thống nhất cho toàn bộ doanh nghiệp.`,
     image: image_qlsx1,
     icon: BarChart3,
+    path: '/'
   },
 ];
 
@@ -82,19 +85,13 @@ export const ServicesSection = () => {
                     <p key={idx}>{paragraph}</p>
                   ))}
                 </div>
-                {service.id === 1 ? (
-                  <Link to="/industrial/manufacturing">
+                <Link to={service.path}>
                     <Button className="group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 ">
+                      <ScrollToTop/>
                       Xem chi tiết
                       <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
-                ) : (
-                  <Button className="group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 ">
-                    Xem chi tiết
-                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                )}
               </div>
             </motion.div>
           ))}

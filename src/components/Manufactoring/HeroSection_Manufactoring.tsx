@@ -62,7 +62,7 @@ export const HeroSection = () => {
             <p className="text-lg leading-relaxed">
               <span className="text-primary font-semibold">ECOTEL là đơn vị tiên phong cung cấp các giải pháp về gia công máy và dây chuyền sản xuất.</span>
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-[19px]">
               Trong bối cảnh công nghiệp hiện đại, việc tối ưu hóa dây chuyền sản xuất và gia công chế tạo máy đóng vai trò then chốt trong việc nâng cao năng suất, giảm chi phí và cải thiện chất lượng sản phẩm. <span className="text-foreground font-medium">ECOTEL</span> mang đến giải pháp <span className="text-foreground font-medium">thiết kế, chế tạo máy và dây chuyền sản xuất</span> theo nhu cầu đặc thù của từng doanh nghiệp, giúp tối ưu hiệu quả vận hành và đẩy mạnh tự động hóa trong sản xuất.
             </p>
           </div>

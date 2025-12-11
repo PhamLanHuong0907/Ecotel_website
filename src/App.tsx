@@ -13,6 +13,8 @@ import Industrial from "./pages/Industrial";
 import Professor from "./pages/Professor";
 import Products from "./pages/Product";
 import Partners from "./pages/Partners";
+import ScrollToTop from "./components/Scrolltotop";
+import Smart_Factory from "./pages/Smart_Factory";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,8 +22,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      
       <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
+          
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/about/leadership" element={<Leadership />} />
@@ -30,6 +35,7 @@ const App = () => (
           <Route path="/about/products" element={<Products />} />
           <Route path="/about/partners" element={<Partners />} />
           <Route path="/industrial/manufacturing" element={<ManufacturingDetail />} />
+          <Route path="/industrial/smart_factory" element={<Smart_Factory/>}/>
           <Route path="/industrial" element={<Industrial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
