@@ -61,7 +61,7 @@ export const OrganizationSection = () => {
                   {dept.children.map((child) => (
                     <div key={child} className="flex flex-col items-center px-2 flex-1">
                       <div className={`h-6 w-[2px] bg-[#8B4513]`}></div>
-                      <div className={`w-full h-full min-h-[80px] flex items-center justify-center p-2 bg-gradient-to-b from-[#ffe4b5] to-[#ffdea8] text-blue-700 font-semibold text-sm text-center underline decoration-blue-700/50 underline-offset-2 border border-orange-300 rounded-sm hover:-translate-y-1 transition-transform duration-300 ${nodeShadow}`}>
+                      <div className={`w-full h-full min-h-[80px] flex items-center justify-center p-2 bg-gradient-to-b from-[#ffe4b5] to-[#ffdea8] text-blue-700 font-semibold text-sm text-center  border border-orange-300 rounded-sm hover:-translate-y-1 transition-transform duration-300 ${nodeShadow}`}>
                         {child}
                       </div>
                     </div>
