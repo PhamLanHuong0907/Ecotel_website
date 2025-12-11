@@ -12,6 +12,7 @@ import ManufacturingDetail from "./pages/Manufactoring";
 import Industrial from "./pages/Industrial";
 import Professor from "./pages/Professor";
 import Products from "./pages/Product";
+import Partners from "./pages/Partners";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/about/professors" element={<Professor />} />
           <Route path="/about/customers" element={<Customers />} />
           <Route path="/about/products" element={<Products />} />
+          <Route path="/about/partners" element={<Partners />} />
           <Route path="/industrial/manufacturing" element={<ManufacturingDetail />} />
           <Route path="/industrial" element={<Industrial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

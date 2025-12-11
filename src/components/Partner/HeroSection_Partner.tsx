@@ -1,6 +1,6 @@
 import { Users } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import customer from "@/assets/dansinh1.webp"
+import customer from "@/assets/doitac1.webp"
 import { StatsSection } from "@/components/Customer/StatsSection";
 export const HeroSection = () => {
   const { ref, isVisible } = useSectionInView();
@@ -35,10 +35,10 @@ export const HeroSection = () => {
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
           
-            <span className="gradient-text">Khách hàng tin cậy</span>
+            <span className="gradient-text">Đối tác đồng hành</span>
             <br />
             <div style={{ height: '10px' }}></div>
-            <span className="text-foreground">của chúng tôi</span>
+            <span className="text-foreground">cùng chúng tôi</span>
           </h1>
           
           <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">

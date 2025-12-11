@@ -1,17 +1,17 @@
 import { useSectionInView } from "@/hooks/useSectionInView";
-import image_Vinacomin from "@/assets/Vinacomin1.png";
-import image_FiinGroup from "@/assets/Screenshot 2025-12-08 105936.png";
-import image_Toshiba from "@/assets/Toshiba4.png";
-import image_Mast from "@/assets/Mast.jpg";
-import image_Ecopark from "@/assets/Ecopark1.png"
-import image_Hexagon from "@/assets/Screenshot 2025-12-10 161142.png"
+import image_WordPress from "@/assets/WordPress.png";
+import image_WooComerce from "@/assets/WooCommerce.png";
+import image_Cloudera from "@/assets/Cloudera.png";
+import image_Superset from "@/assets/Superset.png";
+import image_Odoo from "@/assets/Odoo.png"
+import image_Tableau from "@/assets/Tableau.png"
 const customersData = [
-  { name: "VINACOMIN", logo: image_Vinacomin, industry: "Khai khoáng" },
-  { name: "FiinGroup", logo: image_FiinGroup, industry: "Tài chính" },
-  { name: "Ecopark", logo: image_Ecopark, industry: "Bất động sản" },
-  { name: "TOSHIBA", logo: image_Toshiba, industry: "Công nghệ" },
-  { name: "HEXAGON", logo: image_Hexagon, industry: "Công nghệ đo lường" },
-  { name: "MAST", logo: image_Mast, industry: "Phụ tùng ô tô" },
+  { name: "WordPress", logo: image_WordPress, industry: "" },
+  { name: "WooComerce", logo: image_WooComerce, industry: "" },
+  { name: "Odoo", logo: image_Odoo, industry: "" },
+  { name: "Cloudera", logo: image_Cloudera, industry: "" },
+  { name: "Tableau", logo: image_Tableau, industry: "" },
+  { name: "Superset", logo: image_Superset, industry: "" },
 ];
 
 const CustomerCard = ({ customer, index, isVisible }: { customer: typeof customersData[0]; index: number; isVisible: boolean }) => (
@@ -58,10 +58,10 @@ export const CustomersGridSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">Khách hàng tiêu biểu</span>
+            <span className="gradient-text">Đối tác tiêu biểu</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Những doanh nghiệp hàng đầu đã tin tưởng và lựa chọn giải pháp của ECOTEL
+            Những doanh nghiệp hàng đầu đã tin tưởng và lựa chọn đồng hành cùng ECOTEL
           </p>
         </div>
         

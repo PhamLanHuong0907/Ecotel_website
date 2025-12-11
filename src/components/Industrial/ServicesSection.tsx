@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Factory, BarChart3, Cpu, ArrowRight } from "lucide-react";
-
+import image_qlsx from "@/assets/Quanlysxtongthe.png";
+import image_qlsx1 from "@/assets/qlsx1.png";
+import image_erp from "@/assets/giaiphaperp.png";
 const services = [
   {
     id: 1,
@@ -24,6 +26,20 @@ const services = [
     description: `Trong bối cảnh Công nghiệp 4.0, việc xây dựng Nhà máy thông minh (Smart Factory) không chỉ là xu hướng mà còn là yếu tố cốt lõi giúp doanh nghiệp sản xuất nâng cao năng suất, tối ưu chi phí và duy trì lợi thế cạnh tranh.\n\nECOTEL tự hào đồng hành cùng các nhà máy trong việc xây dựng tầm nhìn và lộ trình chuyển đổi số, từ việc triển khai các hệ thống IoT, tự động hóa đến phân tích dữ liệu và trí tuệ nhân tạo.`,
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=60",
     icon: Cpu,
+  },
+  {
+    id: 4,
+    title: "Giải pháp quản lý sản xuất tổng thể",
+    description:``,
+    image: image_qlsx,
+    icon: BarChart3,
+  },
+  {
+    id: 5,
+    title: "Giải pháp quản lý sản xuất - EcoMES",
+    description:``,
+    image: image_qlsx1,
+    icon: BarChart3,
   },
 ];
 

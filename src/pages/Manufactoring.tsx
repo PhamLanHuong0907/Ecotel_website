@@ -4,7 +4,8 @@ import { HeroSection } from "@/components/Manufactoring/HeroSection_Manufactorin
 import { FeatureSection } from "@/components/Manufactoring/FeatureSection";
 import { CTASection } from "@/components/CTASection";
 import { Cog, Cpu, Zap, Target, Settings, Shield, Wrench, Factory, CheckCircle2 } from "lucide-react";
-
+import feature1 from "@/assets/daychuyencongnghiep.webp";
+import feature2 from "@/assets/daychuyencongnghiep1.jpg";
 // Data
 const designFeatures = [
   { text: "Thiết kế và chế tạo máy móc chuyên dụng theo yêu cầu, phù hợp với quy trình sản xuất đặc thù của doanh nghiệp.", icon: Cog },
@@ -34,7 +35,7 @@ const ManufacturingDetail = () => {
           }
           description="Với đội ngũ kỹ sư giàu kinh nghiệm và hệ thống công nghệ tiên tiến, ECOTEL cung cấp các giải pháp:"
           features={designFeatures}
-          imageSrc="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&auto=format&fit=crop&q=80"
+          imageSrc={feature1}
           imageAlt="Thiết kế và chế tạo máy"
           floatingBadge={{
             icon: CheckCircle2,
@@ -54,7 +55,7 @@ const ManufacturingDetail = () => {
           }
           description="ECOTEL hỗ trợ doanh nghiệp trong quá trình xây dựng và tối ưu hóa hệ thống nhà máy sản xuất, từ bước lên kế hoạch, thiết kế đến triển khai và vận hành:"
           features={setupFeatures}
-          imageSrc="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80"
+          imageSrc={feature2}
           imageAlt="Set-up nhà máy thông minh"
           floatingBadge={{
             icon: Cpu,
@@ -67,7 +68,7 @@ const ManufacturingDetail = () => {
           backgroundClass="bg-gradient-to-b from-secondary/30 to-background"
           glowClass="from-accent/20 to-primary/20"
         />
-
+        <a href="/industrial"><button className="w-[200px] h-[100px] items-center justify-center text-center ml-[43%] border-blue-600 bg-gradient-to-br from-secondray/30 to -background" >Trở về</button></a>
         <CTASection />
       </main>
 

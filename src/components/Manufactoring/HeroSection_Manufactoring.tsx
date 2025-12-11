@@ -42,12 +42,9 @@ export const HeroSection = () => {
           className="max-w-6xl mx-auto text-center"
         >
           {/* Tag */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary mb-6 animate-glow-pulse">
-            <Factory className="w-4 h-4" />
-            <span className="text-sm font-medium">Giải pháp Công nghiệp</span>
-          </div>
+          
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-[60px]">
             <span className="gradient-text">Giải pháp gia công chế tạo máy</span>
             <br />
             <span className="gradient-text">& dây chuyền sản xuất</span>
@@ -61,7 +58,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-5xl mx-auto mt-8 text-center"
         >
-          <div className="glass-card p-8 rounded-2xl space-y-4">
+          <div className="glass-card p-8 rounded-2xl space-y-4 ">
             <p className="text-lg leading-relaxed">
               <span className="text-primary font-semibold">ECOTEL là đơn vị tiên phong cung cấp các giải pháp về gia công máy và dây chuyền sản xuất.</span>
             </p>
@@ -77,7 +74,7 @@ export const HeroSection = () => {
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="relative mt-[200px] flex justify-center items-center"
+        className="relative mt-[235px] flex justify-center items-center"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10 text-center justify-center flex items-center" />
         <img
