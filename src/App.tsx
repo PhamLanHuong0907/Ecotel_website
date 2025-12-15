@@ -15,6 +15,7 @@ import Products from "./pages/Product";
 import Partners from "./pages/Partners";
 import ScrollToTop from "./components/Scrolltotop";
 import Smart_Factory from "./pages/Smart_Factory";
+import ERPBISolutionsDetail from "./pages/ERP&BI_Solutions";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/industrial/manufacturing" element={<ManufacturingDetail />} />
           <Route path="/industrial/smart_factory" element={<Smart_Factory/>}/>
           <Route path="/industrial" element={<Industrial />} />
+          <Route path="/industrial/erp_bi" element={<ERPBISolutionsDetail/>}/>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Factory, BarChart3, Cpu, ArrowRight } from "lucide-react";
 import image_qlsx from "@/assets/Quanlysxtongthe.png";
 import image_qlsx1 from "@/assets/qlsx1.png";
-import image_erp from "@/assets/giaiphaperp.png";
+import image_erp from "@/assets/erp&bi1.png";
 import ScrollToTop from "../Scrolltotop";
 const services = [
   {
@@ -27,9 +27,9 @@ const services = [
     id: 3,
     title: "Giải pháp ERP & BI - Tối ưu hóa vận hành doanh nghiệp",
     description: `Trong kỷ nguyên số, việc áp dụng hệ thống ERP (Enterprise Resource Planning) và BI (Business Intelligence) trở thành yếu tố quyết định giúp doanh nghiệp tối ưu hóa quy trình vận hành, tăng cường khả năng quản lý dữ liệu và ra quyết định chính xác dựa trên thông tin thời gian thực.\n\nECOTEL mang đến giải pháp ERP & BI toàn diện, giúp doanh nghiệp chuẩn hóa quy trình, đồng bộ dữ liệu và nâng cao hiệu suất hoạt động.`,
-    image: "https://lh7-us.googleusercontent.com/lsW0S-mor_MZlITVwK9rcRTDvRatX8c8MZS4qVcSkJovYSFNX5xu08zVZ63bh3shl9r0TxJ2-Nrij4WPWT0HmC1R3ytC2AXIQsr4VtWbZbbYNsTADzcZ31VM1skKARaAxCEz9JLhELZaeXodLLZZ8Kg",
+    image: image_erp,
     icon: BarChart3,
-    path: '/about/customers'
+    path: '/industrial/erp_bi'
   },
   
   {
