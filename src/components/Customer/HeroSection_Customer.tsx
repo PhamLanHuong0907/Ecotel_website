@@ -1,6 +1,6 @@
 import { Users } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import customer from "@/assets/dansinh1.webp"
+import customer from "@/assets/khachhang.jpg"
 import { StatsSection } from "@/components/Customer/StatsSection";
 export const HeroSection = () => {
   const { ref, isVisible } = useSectionInView();
