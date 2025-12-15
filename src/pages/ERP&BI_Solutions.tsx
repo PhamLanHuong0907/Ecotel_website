@@ -4,8 +4,9 @@ import { HeroSection } from "@/components/ERP&BI_Solutions/HeroSection_ERP&BI_So
 import { FeatureSection } from "@/components/ERP&BI_Solutions/FeatureSection";
 import { CTASection } from "@/components/CTASection";
 import { Cog, Cpu, Zap, Target, Settings, Shield, Wrench, Factory, CheckCircle2 } from "lucide-react";
-import feature1 from "@/assets/daychuyencongnghiep.webp";
-import feature2 from "@/assets/daychuyencongnghiep1.jpg";
+import feature1 from "@/assets/sale.png";
+import feature2 from "@/assets/inventory.png";
+import feature3 from "@/assets/purchasing.png"
 import { Button } from "@/components/ui/button";// Data
 const inventory_Features = [
   { text: "Quản lý danh mục sản phẩm và toàn bộ các biến thể của sản phẩm", icon: Cog },
@@ -17,9 +18,6 @@ const inventory_Features = [
 ];
 
 const sale_Features = [
-  { text: "Hợp đồng khung", icon: Target },
-  { text: "Báo giá", icon: Settings },
-  { text: "Đơn hàng / Hợp đồng", icon: Shield },
   { text: "Phê duyệt tự động theo các chính sách công nợ và thanh toán", icon: Shield},
   { text: "Giao hàng / Công nợ / Thanh toán", icon: Shield},
   { text: "Quản lý bảng giá, chính sách giá", icon: Shield},
@@ -50,7 +48,7 @@ const ERPBISolutionsDetail = () => {
         <FeatureSection
           tag={{ icon: Wrench, text: "Module Quản lý bán hàng", colorClass: "bg-primary/10 text-primary" }}
           title={
-            <>Sale <span className="gradient-text">- Quản lý bán hàng</span></>
+            <>Sale & Purchasing <br/> <span className="gradient-text">- Quản lý mua & bán hàng</span></>
           }
           description="Module quản trị chuỗi hoạt động liên quan đến kinh doanh cho mô hình B2B với đầy đủ các nghiệp vụ bao gồm:"
           features={sale_Features}
@@ -58,8 +56,8 @@ const ERPBISolutionsDetail = () => {
           imageAlt="Thiết kế và chế tạo máy"
           floatingBadge={{
             icon: CheckCircle2,
-            title: "Công nghệ tiên tiến",
-            subtitle: "IoT • AI • SCADA",
+            title: "Chức năng chủ chốt",
+            subtitle: "Hợp đồng khung • Báo giá • Đơn hàng",
             iconBgClass: "bg-primary",
             iconColorClass: "text-primary-foreground"
           }}
@@ -78,8 +76,8 @@ const ERPBISolutionsDetail = () => {
           imageAlt="Set-up nhà máy thông minh"
           floatingBadge={{
             icon: Cpu,
-            title: "Công nghệ 4.0",
-            subtitle: "MES • PLC • SCADA",
+            title: "Công nghệ tiên tiến",
+            subtitle: "WMS • MES • SCADA",
             iconBgClass: "bg-accent",
             iconColorClass: "text-accent-foreground"
           }}
@@ -87,24 +85,7 @@ const ERPBISolutionsDetail = () => {
           backgroundClass="bg-gradient-to-b from-secondary/30 to-background"
           glowClass="from-accent/20 to-primary/20"
         />
-        <FeatureSection
-          tag={{ icon: Wrench, text: "Module Quản lý mua hàng", colorClass: "bg-primary/10 text-primary" }}
-          title={
-            <>Purchasing <span className="gradient-text">- Quản lý mua hàng</span></>
-          }
-          description="Module quản lý chuỗi nghiệp vụ của bộ phần mua hàng (cung ứng) của doanh nghiệp với các chức năng: "
-          features={sale_Features}
-          imageSrc={feature1}
-          imageAlt="Thiết kế và chế tạo máy"
-          floatingBadge={{
-            icon: CheckCircle2,
-            title: "Công nghệ tiên tiến",
-            subtitle: "IoT • AI • SCADA",
-            iconBgClass: "bg-primary",
-            iconColorClass: "text-primary-foreground"
-          }}
-          glowClass="from-primary/20 to-accent/20"
-        />
+        
          
         <a href="/industrial"><Button className="w-[100px] h-[50px] ml-[47%] mb-6 group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 ">Trở về</Button></a>
         <CTASection />
