@@ -13,7 +13,7 @@ export const HeroSection = () => {
         width: "100%",
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",
-        opacity: "0.8",
+        opacity: "1",
       }}
     >
     <div className="absolute inset-0 bg-black/60"></div>
@@ -38,15 +38,16 @@ export const HeroSection = () => {
             <span className="gradient-text">Khách hàng tin cậy</span>
             <br />
             <div style={{ height: '10px' }}></div>
-            <span className="text-foreground">của chúng tôi</span>
+            <span className="text-foreground [.light_&]:text-white">của chúng tôi</span>
           </h1>
           
-          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed [.light_&]:text-white">
             ECOTEL tự hào được đồng hành cùng hàng trăm doanh nghiệp hàng đầu trong nhiều lĩnh vực khác nhau, từ công nghiệp đến dân sinh.
           </p>
         </div>
       </div>
     </section>
+    <div className="h-6"></div>
     <Customer_StatsSection />
     </div>
   );

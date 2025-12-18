@@ -35,7 +35,7 @@ export const ProductsHero = () => (
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
           <span className="gradient-text">Sản phẩm của chúng tôi</span>
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto [.light_&]:text-white">
           Các sản phẩm phần mềm tiên tiến được phát triển bởi ECOTEL, đáp ứng nhu cầu số hóa và tự động hóa doanh nghiệp.
         </p>
       </motion.div>

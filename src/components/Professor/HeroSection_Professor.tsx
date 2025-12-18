@@ -36,7 +36,7 @@ export const HeroSection = () => {
     
           </h1>
           
-          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed [.light_&]:text-white">
             Đội ngũ chuyên gia giàu kinh nghiệm và tâm huyết, luôn nỗ lực không ngừng để đưa công ty phát triển vững mạnh và mang đến những giải pháp công nghệ tốt nhất.
           </p>
         </div>

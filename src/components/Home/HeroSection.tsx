@@ -17,8 +17,8 @@ export const HeroSection = () => {
          - Light Mode: Dùng lớp phủ trắng nhưng ĐẬM HƠN (90-95%) để che bớt ảnh nền, 
            giúp chữ đen đọc được dễ dàng hơn.
       */}
-      <div className="absolute inset-0 bg-gradient-to-b dark: from-background/70 dark: via-background/40 dark:to-background/90 light: from-gray-800 light: via-white/70 light:to-white/90" />
-      
+
+           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/90 [.light_&]:from-gray-800 [.light_&]:via-gray-300/50 [.light_&]:to-gray-600" />
       {/* Grid Pattern Overlay */}
       <div 
         className="absolute inset-0 opacity-10"
@@ -30,31 +30,19 @@ export const HeroSection = () => {
       />
 
       {/* Floating Elements - Glass card tự động đẹp nhờ CSS glass-card đã sửa trước đó */}
-      <div className="absolute top-1/4 left-10 animate-float hidden md:block">
-        <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center hover:scale-110 transition-transform">
-          <Cpu className="w-8 h-8 text-primary" />
-        </div>
-      </div>
-      <div className="absolute top-1/3 right-20 animate-float hidden md:block" style={{ animationDelay: '2s' }}>
-        <div className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center hover:scale-110 transition-transform">
-          <Network className="w-7 h-7 text-accent" />
-        </div>
-      </div>
-      <div className="absolute bottom-1/3 left-1/4 animate-float hidden md:block" style={{ animationDelay: '4s' }}>
-        <div className="w-12 h-12 rounded-xl glass-card flex items-center justify-center hover:scale-110 transition-transform">
-          <Shield className="w-6 h-6 text-primary" />
-        </div>
-      </div>
+      
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up-delay-1 pt-3">
-            <span className="mt-3 pt-3 text-foreground [.light_&]:text-white ">Tiên phong</span>
+            <span className="pt-3 pb-3 text-foreground [.light_&]:text-white ">Tiên phong</span>
             <br/>
-            <span className="mt-3 gradient-text">chuyển đổi số</span>
+            <p className="h-2"/>
+            <span className="mt-3 pb-3 gradient-text">chuyển đổi số</span>
             <br />
+            <p className="h-2"/>
             <span className="mt-3 text-foreground [.light_&]:text-white">& kết nối hệ sinh thái</span>
           </h1>
 
@@ -68,7 +56,7 @@ export const HeroSection = () => {
 </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up-delay-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 animate-fade-up-delay-3">
             <a
               href="#services"
               className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold hover-lift shadow-lg shadow-primary/20"
@@ -87,7 +75,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <section className="relative z-10 mt-5"> 
+          <section className="relative z-10 mt-3"> 
              <Home_StatsSection />
           </section>
         </div>
