@@ -50,9 +50,46 @@
     --font-body: 'Be Vietnam Pro', sans-serif;
   }
 
-  .dark {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+  .light {
+    /* Nền sáng hơi xanh nhẹ, dịu mắt */
+    --background: 210 40% 98%; 
+    /* Chữ màu xanh đen đậm, tương phản tốt */
+    --foreground: 222 47% 10%;
+
+    /* Card màu trắng tinh để nổi bật trên nền xám xanh */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 10%;
+
+    /* Primary giữ nguyên hoặc chỉnh đậm hơn xíu để rõ trên nền trắng */
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 165 82% 45%; /* Giảm độ sáng chút để rõ hơn trên nền trắng */
+    --accent-foreground: 222 47% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+
+    /* CẬP NHẬT GRADIENT CHO LIGHT MODE */
+    /* Gradient sáng cho nền trắng */
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9) 0%, hsl(210 40% 96% / 0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(210 40% 95%) 50%, hsl(210 40% 98%) 100%);
+    
+    /* Shadow nhẹ hơn cho giao diện sáng */
+    --shadow-card: 0 8px 32px hsl(222 47% 10% / 0.1);
   }
 }
 

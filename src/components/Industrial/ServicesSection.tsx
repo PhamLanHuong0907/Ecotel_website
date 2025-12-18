@@ -17,7 +17,7 @@ const services = [
   },
   {
     id: 2,
-    title: "Giải pháp gia công chế tạo máy & dây chuyền sản xuất",
+    title: "Giải pháp gia công chế tạo máy \n& dây chuyền sản xuất",
     description: `ECOTEL là đơn vị tiên phong cung cấp các giải pháp về gia công máy và dây chuyền sản xuất.\n\nTrong bối cảnh công nghiệp hiện đại, việc tối ưu hóa dây chuyền sản xuất và gia công chế tạo máy đóng vai trò then chốt trong việc nâng cao năng suất, giảm chi phí và cải thiện chất lượng sản phẩm. ECOTEL mang đến giải pháp thiết kế, chế tạo máy và dây chuyền sản xuất theo nhu cầu đặc thù của từng doanh nghiệp, giúp tối ưu hiệu quả vận hành và đẩy mạnh tự động hóa trong sản xuất.`,
     image: "https://cncvina.com.vn/uploads/2548/day-chuyen-san-xuat-tu-dong-su-dung-robot-1-scaled.jpg",
     icon: Factory,
@@ -25,7 +25,7 @@ const services = [
   },
   {
     id: 3,
-    title: "Giải pháp ERP & BI - Tối ưu hóa vận hành doanh nghiệp",
+    title: "Giải pháp ERP & BI \n Tối ưu hóa vận hành doanh nghiệp",
     description: `Trong kỷ nguyên số, việc áp dụng hệ thống ERP (Enterprise Resource Planning) và BI (Business Intelligence) trở thành yếu tố quyết định giúp doanh nghiệp tối ưu hóa quy trình vận hành, tăng cường khả năng quản lý dữ liệu và ra quyết định chính xác dựa trên thông tin thời gian thực.\n\nECOTEL mang đến giải pháp ERP & BI toàn diện, giúp doanh nghiệp chuẩn hóa quy trình, đồng bộ dữ liệu và nâng cao hiệu suất hoạt động.`,
     image: image_erp,
     icon: BarChart3,
@@ -34,7 +34,7 @@ const services = [
   
   {
     id: 5,
-    title: "Giải pháp Eco-MES - Mảnh ghép hoàn hảo kết nối ERP và Tầng sản xuất",
+    title: "Giải pháp Eco-MES \nMảnh ghép hoàn hảo kết nối \nERP & Tầng sản xuất",
     description:`
 
 Sự đứt gãy thông tin giữa bộ phận văn phòng (ERP) và phân xưởng sản xuất là rào cản lớn nhất của doanh nghiệp. Eco-MES đóng vai trò là "trung tâm điều phối", tiếp nhận kế hoạch từ ERP và chuyển đổi thành lệnh sản xuất chi tiết xuống từng máy.
@@ -42,7 +42,7 @@ Sự đứt gãy thông tin giữa bộ phận văn phòng (ERP) và phân xư�
 Giải pháp của chúng tôi cung cấp khả năng kiểm soát toàn diện: từ giám sát hiệu suất thiết bị, quản lý chất lượng đến tích hợp kho bãi. Dữ liệu được thu thập tự động qua IoT Gateway, đảm bảo tính minh bạch và thống nhất cho toàn bộ doanh nghiệp.`,
     image: image_qlsx1,
     icon: BarChart3,
-    path: '/'
+    path: '/industrial/eco_mes'
   },
 ];
 
@@ -77,7 +77,7 @@ export const ServicesSection = () => {
 
               {/* Content */}
               <div className="w-full lg:w-1/2 space-y-6">
-                <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">
+                <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary whitespace-pre-line">
                   {service.title}
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -86,7 +86,7 @@ export const ServicesSection = () => {
                   ))}
                 </div>
                 <Link to={service.path}>
-                    <Button className="group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 ">
+                    <Button className="group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 mt-3">
                       <ScrollToTop/>
                       Xem chi tiết
                       <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

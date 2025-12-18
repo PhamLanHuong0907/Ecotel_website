@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/Manufactoring/HeroSection_Manufactoring";
-import { FeatureSection } from "@/components/Manufactoring/FeatureSection";
+import { FeatureSection } from "@/components/FeatureSection";
 import { CTASection } from "@/components/CTASection";
 import { Cog, Cpu, Zap, Target, Settings, Shield, Wrench, Factory, CheckCircle2 } from "lucide-react";
 import feature1 from "@/assets/daychuyencongnghiep.webp";

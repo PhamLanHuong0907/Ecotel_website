@@ -45,7 +45,9 @@ export const HeroSection = () => {
           
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-[60px]">
-            <span className="gradient-text">Giải pháp ERP & BI <br/> Tối ưu hóa vận hành doanh nghiệp</span>
+            <span className="gradient-text">Giải pháp ERP & BI </span>
+            <br/> 
+            <span className="text-4xl text-white [.light_&]:text-gray-500">Tối ưu hóa vận hành doanh nghiệp</span>
           </h1>
         </motion.div>
 

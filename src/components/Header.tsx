@@ -33,8 +33,8 @@ const navItems: NavItem[] = [
     href: "#services",
     dropdown: [
       { label: "Công nghiệp", href: "/industrial" },
-      { label: "Dân sinh", href: "#residential" },
-      { label: "Giải pháp IoT tổng thể", href: "#iot-solutions" },
+      { label: "Dân sinh", href: "/living_standard" },
+      { label: "Giải pháp IoT tổng thể", href: "/iot" },
     ],
   },
   {

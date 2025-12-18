@@ -29,7 +29,7 @@ export const HeroSection = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               <span className="gradient-text animate-text-glow inline-block">ECOTEL</span>
               <br />
-              <span className="text-foreground text-3xl md:text-4xl lg:text-5xl">Connected Ecosystem</span>
+              <span className="text-foreground text-3xl md:text-4xl lg:text-5xl [.light&]: text-white ">Connected Ecosystem</span>
             </h1>
             <div className="w-32 h-1 mx-auto bg-gradient-to-r from-primary via-accent to-primary rounded-full mb-10 animate-shimmer" />
             <p className="text-xl text-white leading-relaxed mb-12 max-w-3xl mx-auto">

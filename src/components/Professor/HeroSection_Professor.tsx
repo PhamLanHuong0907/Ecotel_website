@@ -1,7 +1,7 @@
 import { Sparkles, Quote } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import leader from "@/assets/chuyengia.webp"
-import { ValuesSection } from "@/components/Leadership/ValuesSection";
+import Value_StatsSection from "../Leadership/ValuesSection";
 export const HeroSection = () => {
   const { ref, isVisible } = useSectionInView();
 
@@ -52,7 +52,7 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
-    <ValuesSection />
+    <Value_StatsSection />
     </div>
   );
 };

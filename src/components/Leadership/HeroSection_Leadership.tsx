@@ -1,7 +1,7 @@
 import { Sparkles, Quote } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import leader from "@/assets/leader2.png"
-import { ValuesSection } from "@/components/Leadership/ValuesSection";
+import Value_StatsSection from "./ValuesSection";
 export const HeroSection = () => {
   const { ref, isVisible } = useSectionInView();
 
@@ -34,7 +34,7 @@ export const HeroSection = () => {
     
           </h1>
           
-          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed [.light_&]:text-white">
             Đội ngũ lãnh đạo giàu kinh nghiệm và tâm huyết, luôn nỗ lực không ngừng để đưa công ty phát triển vững mạnh và mang đến những giải pháp công nghệ tốt nhất.
           </p>
         </div>
@@ -50,7 +50,7 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
-    <ValuesSection />
+    <Value_StatsSection />
     </div>
   );
 };

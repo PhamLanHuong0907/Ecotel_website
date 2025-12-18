@@ -1,16 +1,15 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/Smart_Factory/HeroSection_SmartFactory";
-import { FeatureSection } from "@/components/Smart_Factory/FeatureSection";
+import { FeatureSection } from "@/components/FeatureSection";
 import { CTASection } from "@/components/CTASection";
 import { Cog, Cpu, Zap, Target, Settings, Shield, Wrench, Factory, CheckCircle2 } from "lucide-react";
 import feature1 from "@/assets/smart_factory2.png";
 import { Button } from "@/components/ui/button";
 // Data
 const designFeatures = [
-  { text: "Hệ thống báo cáo quản trị thông minh (BI-Bussiness Intelligence)", icon: Cog , path: '/about'},
-  { text: "Hệ thống hoạch định nguồn lực doanh (ERP-Enterprise Resource Planning)", icon: Cpu, path: '/' },
-  { text: "Hệ thống thực thi điều hành sản xuất (MES-Manufacturing Execution System)", icon: Zap, path: '/' },
+  { text: "Hệ thống quản trị doanh nghiệp ERP & BI", icon: Cog , path: '/industrial/erp_bi'},
+  { text: "Hệ thống thực thi điều hành sản xuất (MES-Manufacturing Execution System)", icon: Zap, path: '/industrial/eco_mes' },
   { text: "Hệ thống IoT và thực thi sản xuất (IoT)", icon: Cog, path: '/'},
 ];
 const Smart_Factory = () => {
@@ -38,6 +37,7 @@ const Smart_Factory = () => {
             iconBgClass: "bg-primary",
             iconColorClass: "text-primary-foreground"
           }}
+          
           glowClass="from-primary/20 to-accent/20"
         />
         <a href="/industrial"><Button className="w-[100px] h-[50px] ml-[47%] mb-6 group bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400 " >Trở về</Button></a>

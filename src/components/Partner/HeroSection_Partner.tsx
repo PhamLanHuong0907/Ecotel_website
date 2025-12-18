@@ -1,7 +1,7 @@
 import { Users } from "lucide-react";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import customer from "@/assets/doitac1.webp"
-import { StatsSection } from "@/components/Customer/StatsSection";
+import Customer_StatsSection from "../Customer/StatsSection";
 export const HeroSection = () => {
   const { ref, isVisible } = useSectionInView();
 
@@ -47,7 +47,7 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
-    <StatsSection />
+    < Customer_StatsSection/>
     </div>
   );
 };

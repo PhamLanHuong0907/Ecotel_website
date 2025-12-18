@@ -16,6 +16,19 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Lovable" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <script>
+      (function() {
+        const storedTheme = localStorage.getItem('theme');
+        const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        
+        if (storedTheme === 'light' || (!storedTheme && systemPrefersLight)) {
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+        }
+      })();
+    </script>
   </head>
 
   <body>
