@@ -18,7 +18,7 @@ export const HeroSection = () => {
            giúp chữ đen đọc được dễ dàng hơn.
       */}
 
-           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/90 [.light_&]:from-gray-800 [.light_&]:via-gray-300/50 [.light_&]:to-gray-600" />
+           <div className="absolute inset-0 bg-gradient-to-b [.dark_&]:from-background/70 [.dark_&]:via-background/50 [.dark_&]:to-background/90 [.light_&]:from-gray-800 [.light_&]:via-gray-300/50 [.light_&]:to-gray-600" />
       {/* Grid Pattern Overlay */}
       <div 
         className="absolute inset-0 opacity-10"
