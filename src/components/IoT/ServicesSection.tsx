@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Factory, BarChart3, Cpu, ArrowRight } from "lucide-react";
 import image_iot from "@/assets/iot_tong_the.jpg"
-import image_ecome from "@/assets/Ecomes.png";
+import image_ecome from "@/assets/ecomes.png";
 import image_ecovision from "@/assets/ecovision.png"
 import ScrollToTop from "../Scrolltotop";
 const services = [
