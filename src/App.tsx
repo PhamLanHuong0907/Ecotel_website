@@ -25,11 +25,13 @@ import Garagage from "./pages/Kiemsoatxe";
 import PCB from "./pages/PCB";
 import IoTSolutions from "./pages/IoTSolutions";
 import Ecovision from "./pages/Ecovision";
+import ChristmasIntro from "./components/ChiristmasIntro";
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <ChristmasIntro />
       <Toaster />
       <Sonner />
       

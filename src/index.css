@@ -91,6 +91,57 @@
     /* Shadow nhẹ hơn cho giao diện sáng */
     --shadow-card: 0 8px 32px hsl(222 47% 10% / 0.1);
   }
+  .theme-noel {
+    /* Nền: Xanh lá đậm (Pine Green) tạo cảm giác đêm Noel */
+    --background: 155 42% 7%; 
+    --foreground: 0 0% 98%;
+
+    /* Card: Xanh đậm hơn chút hoặc pha chút rêu */
+    --card: 155 42% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 155 42% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary: Đỏ Noel rực rỡ */
+    --primary: 350 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Xanh rêu tối */
+    --secondary: 155 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 155 30% 15%;
+    --muted-foreground: 155 20% 70%;
+
+    /* Accent: Vàng kim (Gold) cho chuông/sao */
+    --accent: 45 93% 50%;
+    --accent-foreground: 155 42% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border: Xanh lá tối */
+    --border: 155 30% 20%;
+    --input: 155 30% 20%;
+    --ring: 350 89% 60%; /* Ring focus màu đỏ */
+
+    /* Gradient Noel: Chuyển từ Đỏ sang Vàng */
+    --gradient-primary: linear-gradient(135deg, hsl(350 89% 60%) 0%, hsl(45 93% 50%) 100%);
+    
+    /* Gradient nền tối đậm đà hơn */
+    --gradient-dark: linear-gradient(180deg, hsl(155 42% 7%) 0%, hsl(155 42% 12%) 100%);
+    
+    /* Card Noel: Hiệu ứng kính mờ trên nền xanh */
+    --gradient-card: linear-gradient(145deg, hsl(155 42% 12% / 0.8) 0%, hsl(155 42% 9% / 0.6) 100%);
+    
+    --gradient-hero: linear-gradient(135deg, hsl(155 42% 9%) 0%, hsl(155 42% 5%) 50%, hsl(155 42% 9%) 100%);
+    
+    /* Shadow glow màu đỏ ấm áp */
+    --shadow-glow: 0 0 60px hsl(350 89% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(155 42% 3% / 0.6);
+    --shadow-button: 0 4px 20px hsl(350 89% 60% / 0.4);
+  }
 }
 
 @layer base {
@@ -308,4 +359,27 @@
   0% { border-color: hsl(199 89% 48%); }
   50% { border-color: hsl(165 82% 51%); }
   100% { border-color: hsl(199 89% 48%); }
+}
+/* index.css */
+
+@layer utilities {
+  .animate-snow {
+    animation-name: snow-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes snow-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(20px); /* Rơi xuống đáy + bay nhẹ sang phải */
+    opacity: 0.3;
+  }
 }

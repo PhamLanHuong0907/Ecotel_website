@@ -73,12 +73,23 @@ export default {
         "border-beam": {
           "100%": { "offset-distance": "100%" },
         },
+        "fly-across": {
+          "0%": { transform: "translateX(-100vw)" },
+          "100%": { transform: "translateX(100vw)" },
+        },
+        // [THÊM MỚI] Animation hiện thiệp
+        "zoom-in": {
+          "0%": { transform: "scale(0)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         shimmer: "shimmer 2s linear infinite",
         "border-beam": "border-beam 4s linear infinite",
+        "fly-across": "fly-across 8s linear forwards", // Bay chậm trong 8s
+        "zoom-in": "zoom-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
     },
   },
