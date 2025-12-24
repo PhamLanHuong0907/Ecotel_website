@@ -31,11 +31,12 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <ChristmasIntro />
+   
       <Toaster />
       <Sonner />
       
       <BrowserRouter>
+        <ChristmasIntro />
         <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Index />} />

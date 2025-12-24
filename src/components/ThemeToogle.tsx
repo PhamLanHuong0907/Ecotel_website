@@ -26,7 +26,7 @@ const ThemeToggle = () => {
   useEffect(() => {
     // 1. Kiểm tra xem hôm nay có phải 24/12 không
     const now = new Date();
-    const isTodayNoel = now.getDate() === 23 && now.getMonth() === 11; // Tháng 11 trong JS là tháng 12 ngoài đời
+    const isTodayNoel = now.getDate() === 24 && now.getMonth() === 11; // Tháng 11 trong JS là tháng 12 ngoài đời
     setIsNoelDay(isTodayNoel);
 
     // 2. Lấy theme đã lưu

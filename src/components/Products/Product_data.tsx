@@ -1,10 +1,8 @@
 import { Database, Settings, Factory, Users, Cpu, Navigation, Gauge } from "lucide-react";
 // Import images (giữ nguyên các import ảnh của bạn ở đây)
-import khodulieu from "@/assets/khodulieutaptrung.png"
-import khodulieu1 from "@/assets/khodulieutaptrung1.png"
-import quanlytaisan from "@/assets/Quanlytaisan.png"
-import quanlytaisan1 from "@/assets/Screenshot 2025-12-10 154157.png"
-import phanmemkehoach from "@/assets/quanlydinhmuc.png"
+import khodulieu from "@/assets/khodulieu.png"
+import drone from "@/assets/drone.png"
+import hethongthamdo from "@/assets/hethongthamdo.png"
 import phanmemkehoach1 from "@/assets/quanlydinhmuc1.png"
 import phanmemkehoach2 from "@/assets/quanlydinhmuc2.png"
 import phanmemnhansu from "@/assets/Quanlynhansu.png"
@@ -26,7 +24,7 @@ export interface ProductSlide {
   image: string;
   title: string;
   description: string;
-  features: string[];
+  features: React.ReactNode[];
 }
 
 export interface Product {
@@ -46,68 +44,87 @@ export const allProducts: Product[] = [
     slides: [
       {
         image: khodulieu,
-        title: "Kho dữ liệu tập trung",
-        description: "Hệ thống Data Lakehouse hiện đại với kiến trúc 3 lớp...",
-        features: ["Kiến trúc Data Lakehouse 3 lớp", "Hỗ trợ Data Science...", "Truy vấn hiệu quả...", "Tích hợp RAG Store..."]
-      },
-      {
-        image: khodulieu1,
-        title: "Sơ đồ hoạt động của kho dữ liệu tập trung",
-        description: "Mô hình hệ thống kết nối ứng dụng Flutter với luồng xử lý dữ liệu tập trung 3 lớp (Data Lakehouse) và cơ sở dữ liệu vector (ChromaDB), nhằm phục vụ quản lý tài liệu thông minh và tính năng Chat AI (RAG).",
+        title: "Giải pháp kho dữ liệu",
+        description: "Giải pháp Data Lakehouse được thiết kế mục đích đồng bộ dữ liệu tại một nơi giúp khai thác tối đa giá trị dữ liệu trong quá trình chuyển đổi số",
         features: [
-          "Flutter App: Giao diện người dùng đa nền tảng, tích hợp quản lý trạng thái (Provider/Bloc/Riverpod).",
+          // Phần tử 1: Dùng thẻ div bọc ngoài (hoặc Fragment <></>)
+          <div key="feature-1">
+            <strong>Đối với chuyên gia dữ liệu:</strong>
+            <ul className="list-disc pl-5 mt-1 space-y-1">
+              <li>Cung cấp một hệ thống lưu trữ linh hoạt.</li>
+              <li>Hỗ trợ AI/ML, phân tích dữ liệu lớn.</li>
+              <li>Đảm bảo dữ liệu sạch, có cấu trúc và dễ truy xuất.</li>
+            </ul>
+          </div>,
 
-"Hệ thống API: Cung cấp các dịch vụ Dashboard, Tìm kiếm, Chat, và Phân tích dữ liệu.",
-
-"Data Lakehouse (3 lớp)",
-"RAG Store (ChromaDB): Hỗ trợ tìm kiếm vector, so khớp độ tương đồng và lưu trữ ngữ cảnh cho tính năng Chat thông minh."
+          // Phần tử 2
+          <div key="feature-2">
+            <strong>Đối với chuyên gia kinh doanh:</strong>
+            <ul className="list-disc pl-5 mt-1 space-y-1">
+              <li>Tích hợp công cụ BI, phân tích dữ liệu thời gian thực.</li>
+              <li>Giúp đưa ra quyết định nhanh chóng, chính xác.</li>
+            </ul>
+          </div>
         ]
       }
     ]
   },
   {
     id: 2,
-    name: "Quản lý tài sản, thiết bị cơ điện",
+    name: "Hệ thống thăm dò",
     icon: <Settings className="w-8 h-8" />,
     gradient: "from-emerald-500 to-teal-500",
     slides: [
       {
-        image: quanlytaisan,
-        title: "Quản lý nghiệp vụ tài sản",
-        description: "Số hóa thông tin tài sản và nghiệp vụ quản lý tài sản bao gồm cấp mới, điều chuyển, thu hồi và thanh lý.",
+        image: drone,
+        title: "Drone khảo sát",
+        description: "ECOTEL ứng dụng thiết bị bay không người lái kết nối 5G để thực hiện:",
         features: [
-          "Số hóa thông tin tài sản",
-          "Số hóa quản lý nghiệp vụ tài sản",
-          "Thu hồi và thanh lý",
-          "Giao diện thân thiện, linh hoạt"
+          "Khảo sát địa hình",
+          "Giám sát hoạt động khai thác, khoan phá mìn và khảo sát mỏ",
+          "Lập bản đồ 3D địa chất",
         ]
       },
       {
-        image: quanlytaisan1,
-        title: "Giám sát tài sản IoT",
-        description: "Giám sát trạng thái tài sản với thời gian thực thông qua công nghệ IoT, hỗ trợ trên mọi nền tảng và thiết bị.",
+        image: hethongthamdo,
+        title: "Phân tích thông mình",
+        description: "ECOTEL xây dựng nền tảng đám mây tích hợp dữ liệu từ khoan, địa chấn, drone, cảm biến thành một cơ sở dữ liệu tập trung",
         features: [
-          "Giám sát thời gian thực",
-          "Tích hợp IoT sensors",
-          "Cảnh báo tự động",
-          "Dashboard trực quan"
+          "Truy cập từ xa",
+          "Phân tích chuyên sâu, cộng tác trực tuyến",
+          "Dữ liệu minh bạch, bảo mật, toàn vẹn",
+          "Đề xuất các điểm khoan thăm dò tối ưu",
+          "Tối ưu hóa quy trình khai thác và nâng cao hiệu suất vận hành",
         ]
-      }
+      },
     ]
   },
   {
     id: 3,
-    name: "Phần mềm kế hoạch và định mức sản xuất",
+    name: "Lập bản đồ",
     icon: <Factory className="w-8 h-8" />,
     gradient: "from-orange-500 to-amber-500",
     slides: [
       {
-        image: phanmemkehoach,
-        title: "Kế hoạch & Định mức sản xuất",
-        description: "Giải pháp toàn diện quản lý vật tư, tài sản trong khoán ",
+        image: phanmemkehoach1,
+        title: "Tiềm năng khoáng sản",
+        description: "ECOTEL cung cấp hệ thống lập bản đồ tiềm năng khoáng sản, giúp doanh nghiệp khai thác tối ưu tài nguyên bằng cách phân tích địa vật lý và địa chất ",
         features: [
-          "Quản lý vật tư, tài sản trong khoán",
-          "Tính toán đơn giá và định mức",
+          <div key="feature-1">
+            <strong>Địa vật lý:</strong>
+            <ul className="list-disc pl-5 mt-1 space-y-1">
+              <li>Đánh giá từ tính, trọng lực, tính dẫn điện để xác định tầng chứa khoáng sản</li>
+            </ul>
+          </div>,
+
+          // Phần tử 2
+          <div key="feature-2">
+            <strong>Địa chất:</strong>
+            <ul className="list-disc pl-5 mt-1 space-y-1">
+              <li>Phân tích khoảng cách đến các đứt gãy</li>
+              <li>Dự báo khu vực có trữ lượng cao và giảm rủi ro thăm dò</li>
+            </ul>
+          </div>
         ]
       },
       {
