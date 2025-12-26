@@ -13,7 +13,7 @@ import ScrollToTop from "../Scrolltotop";
 const services = [
   {
     icon: Factory,
-    title: "Công nghiệp",
+    title: "Hệ thống ERP",
     description: "Giải pháp tự động hóa cho nhà máy và doanh nghiệp, từ gia công chế tạo máy, tối ưu vận hành đến xây dựng nhà máy thông minh.",
     features: ["Giải pháp gia công chế tạo máy & dây chuyền sản xuất", "Giải pháp ERP & BI - Tối ưu hóa vận hành doanh nghiệp", "Nhà máy thông minh"],
     gradient: "from-blue-500 to-cyan-500",
@@ -25,7 +25,7 @@ const services = [
   },
   {
     icon: Home,
-    title: "Dân sinh",
+    title: "Hệ thống MES",
     description: "Trong lĩnh vực dân sinh, ECOTEL cung cấp nhiều giải pháp, thiết bị công nghệ nhằm phục vụ cho đời sống xã hội, bao gồm: Hệ thống đỗ xe tự động, sạc pin xe điện, và giám sát an ninh (giải pháp Camera AI). Chúng tôi cũng không ngừng cập nhật các dòng sản phẩm phù hợp với mục tiêu giúp cuộc sống tiện ích, thông minh và xanh hơn.",
     features: ["Giải pháp đỗ xe thông minh & Kiểm soát xe ra vào", "Dịch vụ & Giải pháp sạc pin ô tô điện thông minh", "Giải pháp giám sát an ninh thông minh - Camera AI"],
     gradient: "from-emerald-500 to-teal-500",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     icon: Globe,
-    title: "Giải pháp IoT tổng thể",
+    title: "Hệ thống tích hợp AI & IoT",
     description: "ECOTEL không ngừng phát triển và triển khai các ứng dụng IoT tiên tiến ngay tại công ty, xem đây là nền tảng quan trọng để tối ưu hóa giải pháp cho ngành sản xuất, nâng cao hiệu suất và tính linh hoạt trong vận hành.",
     features: ["Thiết kế mạch in PCB", "Giải pháp IoT tổng thể"],
     gradient: "from-violet-500 to-purple-500",

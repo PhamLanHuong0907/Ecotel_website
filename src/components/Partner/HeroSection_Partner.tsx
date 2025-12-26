@@ -17,7 +17,7 @@ export const HeroSection = () => {
       }}
     >
     <div className="absolute inset-0 bg-black/60"></div>
-    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden">
+    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden h-screen">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -32,10 +32,10 @@ export const HeroSection = () => {
             <div className="w-4 h-4 text-primary animate-pulse" />
             <span className="text-sm font-medium text-primary"></span>
           </div>
-          
+          <div className="h-8"/>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
           
-            <span className="gradient-text">Đối tác đồng hành</span>
+            <span className="gradient-text ">Đối tác đồng hành</span>
             <br />
             <div style={{ height: '10px' }}></div>
             <span className="text-foreground [.light_&]:text-white">cùng chúng tôi</span>
@@ -46,9 +46,10 @@ export const HeroSection = () => {
           </p>
         </div>
       </div>
+      <div className="h-20"/>
+      < Customer_StatsSection/>
     </section>
-    <div className="h-[60px]"/>
-    < Customer_StatsSection/>
+    
     </div>
   );
 };

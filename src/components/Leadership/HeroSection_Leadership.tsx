@@ -15,7 +15,7 @@ export const HeroSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden">
+    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden h-screen">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -28,7 +28,7 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`text-center max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 ">
            
             <span className="gradient-text">Đội ngũ lãnh đạo</span>
     
@@ -49,8 +49,10 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
+      <div className="h-[15%]"/>
+       <Value_StatsSection />
     </section>
-    <Value_StatsSection />
+   
     </div>
   );
 };

@@ -8,7 +8,7 @@ export const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
       
@@ -23,19 +23,11 @@ export const HeroSection = () => {
            <div 
   className={
     "absolute inset-0 " +
-    "bg-gradient-to-b from-background/70 via-background/50 to-background/90 " +
-    "[.light_&]:from-gray-800 [.light_&]:via-gray-300/50 [.light_&]:to-gray-600"
+    "bg-gradient-to-b from-background/80 via-background/40 to-background/80 " +
+    "[.light_&]:from-gray-950/80 [.light_&]:via-gray-300/30 [.light_&]:to-gray-600/20"
   }
 />
-      {/* Grid Pattern Overlay */}
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{
-          // Sử dụng var(--primary) là an toàn cho cả 2 mode
-          backgroundImage: `linear-gradient(hsl(var(--primary)/0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)/0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }}
-      />
+      
 
       {/* Floating Elements - Glass card tự động đẹp nhờ CSS glass-card đã sửa trước đó */}
       
@@ -44,16 +36,12 @@ export const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up-delay-1 pt-3">
-            <span className="pt-3 pb-3 text-foreground [.light_&]:text-white ">Tiên phong</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold  animate-fade-up-delay-1 pt-6 ">
+            <span className="pt-3 pb-3 gradient-text drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]">ECOTEL</span>
+          </h1>  
             <br/>
-            <p className="h-2"/>
-            <span className="mt-3 pb-3 gradient-text">chuyển đổi số</span>
-            <br />
-            <p className="h-2"/>
-            <span className="mt-3 text-foreground [.light_&]:text-white">& kết nối hệ sinh thái</span>
-          </h1>
-
+            <span className="mt-3 pb-6 text-foreground text-[35px] font-bold animate-fade-up-delay-1 pt-3 [.light_&]:text-white">TIÊN PHONG CHUYỂN ĐỔI SỐ DOANH NGHIỆP</span>
+          <div className="h-6"/>
           {/* FIX 2: Subtitle Text Color
              - text-gray-600: Màu xám đậm cho Light Mode (để đọc được trên nền trắng).
              - dark:text-gray-200: Màu xám sáng cho Dark Mode (để đọc được trên nền đen).

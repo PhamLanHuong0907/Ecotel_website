@@ -9,22 +9,15 @@ import About from "./pages/Introduce";
 import Leadership from "./pages/Leadership";
 import Customers from "./pages/Customer";
 import ManufacturingDetail from "./pages/Manufactoring";
-import Industrial from "./pages/Industrial";
+import ERP from "./pages/ERP_system";
 import Professor from "./pages/Professor";
-import Products from "./pages/Product";
 import Partners from "./pages/Partners";
 import ScrollToTop from "./components/Scrolltotop";
 import Smart_Factory from "./pages/Smart_Factory";
-import ERPBISolutionsDetail from "./pages/ERP&BI_Solutions";
-import Eco_MES from "./pages/Eco-MES";
-import Living_standard from "./pages/Living_standard";
-import IoT from "./pages/IoT";
+import AI_IoT from "./pages/AI&IoT_system";
+import MES from "./pages/MES_system";
 // [NEW] Import ThemeToggle
 import ThemeToggle from "./components/ThemeToogle"; 
-import Garagage from "./pages/Kiemsoatxe";
-import PCB from "./pages/PCB";
-import IoTSolutions from "./pages/IoTSolutions";
-import Ecovision from "./pages/Ecovision";
 import ChristmasIntro from "./components/ChiristmasIntro";
 const queryClient = new QueryClient();
 
@@ -44,22 +37,19 @@ const App = () => (
           <Route path="/about/leadership" element={<Leadership />} />
           <Route path="/about/professors" element={<Professor />} />
           <Route path="/about/customers" element={<Customers />} />
-          <Route path="/about/products" element={<Products />} />
           <Route path="/about/partners" element={<Partners />} />
           <Route path="/industrial/manufacturing" element={<ManufacturingDetail />} />
           <Route path="/industrial/smart_factory" element={<Smart_Factory/>}/>
-          <Route path="/industrial" element={<Industrial />} />
-          <Route path="/industrial/erp_bi" element={<ERPBISolutionsDetail/>}/>
-          <Route path="/industrial/eco_mes" element={<Eco_MES/>}/>
+          <Route path="/erp" element={<ERP />} />
+          <Route path="/mes" element={<MES/>}/>
     
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/living_standard" element={<Living_standard/>}/>
-          <Route path="/living_standard/garagage" element={<Garagage/>}/>
+          <Route path="/AI&IoT" element={<AI_IoT/>}/>
+        
          
-          <Route path="/iot" element={<IoT/>}/>
-           <Route path="/iot/pcb" element={<PCB/>}/>
-          <Route path="/iot/iot_solutions" element={<IoTSolutions/>}/>
-          <Route path="/iot/ecovision" element={<Ecovision/>}/>
+        
+  
+        
           <Route path="*" element={<NotFound />} />
         </Routes>
 

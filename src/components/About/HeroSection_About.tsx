@@ -16,7 +16,7 @@ export const HeroSection = () => {
       }}
     >
       
-      <section ref={ref} className="py-24 relative overflow-hidden">
+      <section ref={ref} className="py-24 relative overflow-hidden h-screen">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-accent/10 blur-3xl animate-pulse-slow" style={{ animationDelay: "1s" }} />

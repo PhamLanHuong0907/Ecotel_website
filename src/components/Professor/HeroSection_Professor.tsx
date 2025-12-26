@@ -17,7 +17,7 @@ export const HeroSection = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
-    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden">
+    <section ref={ref} className="relative pt-32 pb-20 overflow-hidden h-screen">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -51,8 +51,10 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
+      <div className="h-[18%]"/>
+       <Value_StatsSection />
     </section>
-    <Value_StatsSection />
+   
     </div>
   );
 };

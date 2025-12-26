@@ -23,18 +23,17 @@ const navItems: NavItem[] = [
       { label: "Giới thiệu chung", href: "/about" },
       { label: "Đội ngũ lãnh đạo", href: "/about/leadership" },
       { label: "Đội ngũ chuyên gia", href: "/about/professors" },
-      { label: "Danh mục sản phẩm", href: "/about/products" },
       { label: "Khách hàng", href: "/about/customers" },
       { label: "Đối tác", href: "/about/partners" },
     ],
   },
   {
-    label: "DỊCH VỤ",
+    label: "SẢN PHẨM",
     href: "#services",
     dropdown: [
-      { label: "Công nghiệp", href: "/industrial" },
-      { label: "Dân sinh", href: "/living_standard" },
-      { label: "Giải pháp IoT tổng thể", href: "/iot" },
+      { label: "Hệ thống ERP", href: "/erp" },
+      { label: "Hệ thống MES", href: "/mes"},
+      { label: "Hệ thống tích hợp AI", href: "/AI&IoT" },
     ],
   },
   {
