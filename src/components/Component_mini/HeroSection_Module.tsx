@@ -34,7 +34,7 @@ export const HeroSectionModule = ({
   slogan,
   cardsSectionTitle = "Lợi ích nổi bật",
   cards,
-  heroHeight = "45vh" // Giá trị trung bình giữa 65vh và 75vh
+  heroHeight = "50vh" // Giá trị trung bình giữa 65vh và 75vh
 }: HeroSectionModuleProps) => {
   const [currentTheme, setCurrentTheme] = useState('dark');
 
@@ -120,11 +120,11 @@ export const HeroSectionModule = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="relative h-[37vh] min-h-[250px] rounded-xl overflow-hidden group cursor-pointer shadow-lg border border-white/10 "
+                className="relative  min-h-[250px] rounded-xl overflow-hidden group cursor-pointer shadow-lg border border-white/10 "
               >
                 {/* Layer 1: Background Image */}
                 <div
-                  className="absolute inset-0 bg-cover bg-left transition-transform duration-700 group-hover:scale-110"
+                  className="absolute inset-0 bg-cover h-[35vh] bg-left transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${card.image})` }}
                 />
 
