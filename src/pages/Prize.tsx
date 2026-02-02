@@ -13,7 +13,7 @@ const awardsData = [
     icon: Medal,
     color: "from-[#1e5c8b] via-[#338bcf] to-[#4eb9e6]", 
     textColor: "text-[#4eb9e6]",
-    borderColor: "border-amber-500/30"
+    borderColor: "border-[#4eb9e6]/30"
   },
   { 
     period: "2006", 
@@ -22,7 +22,7 @@ const awardsData = [
     icon: Star,
     color: "from-[#1e5c8b] via-[#338bcf] to-[#4eb9e6]",
     textColor: "text-[#4eb9e6]",
-    borderColor: "border-amber-500/30"
+    borderColor: "border-[#4eb9e6]/30"
   },
   { 
     period: "2006", 
@@ -31,7 +31,7 @@ const awardsData = [
     icon: Medal,
     color: "from-[#1e5c8b] via-[#338bcf] to-[#4eb9e6]",
     textColor: "text-[#4eb9e6]",
-    borderColor: "border-amber-500/30"
+    borderColor: "border-[#4eb9e6]/30"
   },
   { 
     period: "2007", 
@@ -40,7 +40,7 @@ const awardsData = [
     icon: Trophy,
     color: "from-[#1e5c8b] via-[#338bcf] to-[#4eb9e6]",
     textColor: "text-[#4eb9e6]",
-    borderColor: "border-amber-500/30"
+    borderColor: "border-[#4eb9e6]/30"
   },
 ];
 
