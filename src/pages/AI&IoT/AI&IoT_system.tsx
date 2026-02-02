@@ -1,15 +1,15 @@
 import { Header } from "@/components/Component_mini/Header";
 import { Footer } from "@/components/Component_mini/Footer";
-import { HeroSection } from "@/components/DataWarehouse/HeroSection_ModuleDataWarehouse";
-import {DataServicesSection} from "@/components/DataWarehouse/ServicesSection";
-const MoudleDataWarehouse = () => {
+import { HeroSection } from "@/components/AI_IOT/HeroSection_AI";
+import {AIServicesSection} from "@/components/AI_IOT/ServicesSection";
+
+const AI_IoT = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
         <HeroSection />
-        <DataServicesSection />
-   
+        <AIServicesSection />
       </main>
 
       <Footer />
@@ -17,4 +17,4 @@ const MoudleDataWarehouse = () => {
   );
 };
 
-export default MoudleDataWarehouse;
+export default AI_IoT;

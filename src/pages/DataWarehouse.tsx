@@ -1,6 +1,6 @@
 import { Header } from "@/components/Component_mini/Header";
 import { Footer } from "@/components/Component_mini/Footer";
-import { HeroSection } from "@/components/DataWarehouse/HeroSection_DataWarehouse";
+import { HeroSection } from "@/components/Component_mini/HeroSection_page";
 import { FeatureSection } from "@/components/Component_mini/FeatureSection";
 // Cập nhật bộ icon cho phù hợp với Data Warehouse
 import { 
@@ -61,7 +61,13 @@ const DataWarehouse = () => {
       <Header />
       
       <main>
-        <HeroSection />
+        <HeroSection 
+        title="Kho dữ liệu tập trung"
+        highlight="Giải pháp Data Lakehouse được thiết kế với mục đích đồng bộ dữ liệu tại một nơi duy nhất, đóng vai trò nền tảng để khai thác tối đa giá trị dữ liệu trong quá trình chuyển đổi số của doanh nghiệp."
+        description=" Hệ thống cung cấp khả năng lưu trữ linh hoạt, hỗ trợ đắc lực cho AI/ML và phân tích dữ liệu lớn, đảm bảo dữ liệu luôn sạch, có cấu trúc và dễ dàng truy xuất cho các chuyên gia dữ liệu.
+
+    Đồng thời, giải pháp tích hợp sẵn các công cụ BI giúp phân tích dữ liệu theo thời gian thực, hỗ trợ các chuyên gia kinh doanh đưa ra quyết định nhanh chóng và chính xác dựa trên nguồn thông tin đáng tin cậy.
+  "/>
         <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
