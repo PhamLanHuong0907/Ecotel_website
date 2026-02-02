@@ -39,7 +39,7 @@ const navItems: NavItem[] = [
     label: "NỔI BẬT",
     href: "#highlights",
     dropdown: [
-      { label: "Dự án", href: "#projects" },
+      { label: "Dự án", href: "/#projects" },
       { label: "Giải thưởng", href: "/prize" },
       { label: "Triển lãm", href: "#exhibitions" },
     ],
@@ -56,11 +56,14 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-start ml-0 group select-none cursor-pointer">
-            <img src={logo} alt="ECOTEL Logo" className="  h-[53px] w-auto object-contain">
-            </img>
-          </a>
-
+          <HashLink
+  smooth
+  to="/#home"
+  className="flex items-start ml-0 group select-none cursor-pointer"
+>
+  <img src={logo} alt="ECOTEL Logo" className="  h-[53px] w-auto object-contain">
+  </img>
+</HashLink>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
@@ -92,16 +95,17 @@ export const Header = () => {
                 {item.dropdown && activeDropdown === item.label && (
                   <div className="absolute top-full left-0 pt-2 animate-fade-up">
                     <div className="glass-card rounded-xl p-2 min-w-[220px] border border-border/50 bg-slate-950">
-                      {item.dropdown.map((subItem) => (
-                        <a
-                          key={subItem.label}
-                          href={subItem.href}
-                          className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
-                        >
-                          {subItem.label}
-                        </a>
-                      ))}
-                    </div>
+  {item.dropdown.map((subItem) => (
+    <HashLink
+      key={subItem.label}
+      to={subItem.href} // Đổi href -> to
+      smooth            // Thêm smooth để cuộn từ từ (tùy chọn)
+      className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
+    >
+      {subItem.label}
+    </HashLink>
+  ))}
+</div>
                   </div>
                 )}
               </div>
