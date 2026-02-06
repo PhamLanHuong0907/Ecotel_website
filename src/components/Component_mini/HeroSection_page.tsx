@@ -17,11 +17,14 @@ export const HeroSection = ({ title, highlight, description }: HeroSectionProps)
       
       {/* --- Background Effects (Responsive size cho các khối mờ) --- */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
-      <div className="absolute top-0 left-1/5 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
-      <div 
-        className="absolute top-20 right-1/5 w-48 h-48 md:w-80 md:h-64 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" 
-        style={{ animationDelay: '1s' }} 
-      />
+      {/* Gradient Layer 1: Màu Primary */}
+<div className="absolute top-0 left-0 w-full h-64 md:h-96 bg-gradient-to-b from-primary/20 to-transparent blur-3xl animate-pulse-slow" />
+
+{/* Gradient Layer 2: Màu Accent */}
+<div 
+  className="absolute top-20 left-0 w-full h-48 md:h-64 bg-gradient-to-b from-accent/10 to-transparent blur-3xl animate-pulse-slow" 
+  style={{ animationDelay: '1s' }} 
+/>
       
       {/* Container */}
       {/* CHANGE 2: mt-10 cho mobile thay vì mt-16 để đỡ trống phía trên */}
